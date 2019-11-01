@@ -17,3 +17,9 @@ keywords: Linux
 ```
 du -h --max-depth=1
 ```
+
+## 当前系统可用容量
+
+```
+df -h
+```
