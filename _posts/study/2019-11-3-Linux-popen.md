@@ -17,7 +17,7 @@ popen先执行fork，然后调用exec执行cmdstring，并返回一个标准的I
 **头文件**：`#include<stdio.h>`
 
 **原型**：
-```
+```C
 FILE *popen(const char *cmdstring, const char *type)
 ``` 
 **cmdstring**：包含shell命令字符串
@@ -27,7 +27,7 @@ FILE *popen(const char *cmdstring, const char *type)
 
 2. 为”w”时，则文件指针连接到cmdstring的标准输入，也可以认为链接stdin
 
-```
+```C
 int pclose(FILE *fp);
 ```
 **fp**：为ponen返回的文件指针
@@ -37,6 +37,7 @@ int pclose(FILE *fp);
 
 ## 用法
 
+### 将输出结果打印
 ```C
 int command(const char * cmd)
 {
@@ -53,5 +54,14 @@ int command(const char * cmd)
     return 0;
 }
 ```
+
+
+### 将输出结果存储
+
+
+
+## 参考
+
+<https://blog.csdn.net/qq_27664167/article/details/82194391>
 
 
