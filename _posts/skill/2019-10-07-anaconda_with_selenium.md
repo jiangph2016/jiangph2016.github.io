@@ -2,8 +2,8 @@
 layout: post
 title: 在Annaconda下使用Selenium
 category: 技巧
-tags: 爬虫
-keywords: selenium
+tags: web
+keywords: selenium,Anaconda
 ---
 
 最近学的比较杂，早就知道selenium这个自动化测试工具了，但是一直没有亲自使用过，因为最近有想爬微博的想法，所以使用了一下，最后发现还是不太适合我的需求，其中在知乎上也看过了这篇文章[为什么不推荐Selenium写爬虫](https://zhangslob.github.io/2018/02/02/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%8E%A8%E8%8D%90Selenium%E5%86%99%E7%88%AC%E8%99%AB/),写的挺好的，但也批判性的接受吧。

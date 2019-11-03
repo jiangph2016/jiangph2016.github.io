@@ -2,8 +2,8 @@
 layout: post
 title: ubuntu系统或Kali系统快速安装pip3
 category: 技巧
-tags: python
-keywords: pip3
+tags: Linux
+keywords: pip3,python
 ---
 
 我用的是WSL的Kali系统，系统里面只装了python2。  

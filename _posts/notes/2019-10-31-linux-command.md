@@ -2,7 +2,7 @@
 layout: post
 title: Linux功能命令记录
 category: 笔记
-tags: git
+tags: Linux
 keywords: Linux
 ---
 
