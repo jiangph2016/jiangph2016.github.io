@@ -38,7 +38,7 @@ int pclose(FILE *fp);
 ## 用法
 
 ### 将输出结果打印
-```C++
+```
 int command(const char * cmd)
 {
     FILE *pp = popen(cmd, "r"); //建立管道

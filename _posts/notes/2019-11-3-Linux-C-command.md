@@ -21,6 +21,18 @@ char *getcwd(char *buf, size_t size);
 - __返回值__：成功返回指向当前目录的指针，和buf 的值一样，错误返回NULL  
 ### 示例
 
+```
+void printCWD()
+{
+    char path[50];
+    if(!getcwd(path,50))
+    {
+        perror("getced error");
+        exit(1);
+    }
+    puts(path);
+}
+```
 
 ## opendir
 
