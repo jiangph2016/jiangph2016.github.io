@@ -27,6 +27,18 @@ keywords: git
 
 [在线阅读](https://datawhalechina.github.io/pumpkin-book/)
 
+### 统计学习方法第二版（李航） 学习笔记、代码实现、课后习题
+
+<https://github.com/librauee/Statistical-Learning>
+
+### 斯坦福网络课程《机器学习》的笔记
+
+<https://github.com/zlotus/notes-LSJU-machine-learning>
+
+### 吴恩达老师的机器学习课程个人笔记
+
+<https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes>
+
 
 ## 技术
 
