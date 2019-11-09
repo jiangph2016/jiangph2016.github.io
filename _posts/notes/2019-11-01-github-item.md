@@ -1,6 +1,6 @@
 ---
 layout: post
-title: github可能用的上的项目记录
+title: github上有用的项目合集
 category: 笔记
 tags: git
 keywords: git

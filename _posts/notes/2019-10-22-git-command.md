@@ -87,4 +87,19 @@ git checkout [文件]
 git checkout .
 ```
 
+
+### 初始化本地项目
+
+```
+git init
+```
+这时候本地会多一个.git文件夹，项目已经创建完成了。
+
+### 绑定到远程仓库
+```
+git remote add origin [项目].git
+```
+
+
+
 To be continue...
