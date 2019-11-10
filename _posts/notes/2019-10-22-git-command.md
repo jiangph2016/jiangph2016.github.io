@@ -17,13 +17,23 @@ keywords: git
 ### 查看当前绑定的远程仓库
 ```
 git remote -v
+git remote show origin 
 ```
 
 ### 查看commit历史
 
 ```
-git log
+git log 
 ```
+
+参数： 
+
+- -p 显示每次提交引入的差异
+- --grep 只输出包含指定字符串的提交
+- --since --after指定日期之后的提交
+- --until --befofe 指定日期之前的提交
+- --committer 查看指定作者的提交
+- --name-only
 
 ### 添加远程仓库
 
@@ -31,7 +41,7 @@ git log
 git remote add origin git@github.com:jiangph2016/仓库名.git
 ```
 
-### 更新本地仓库
+### 从远程仓库拉取数据
 
 ```
 git fetch
@@ -95,10 +105,27 @@ git init
 ```
 这时候本地会多一个.git文件夹，项目已经创建完成了。
 
-### 绑定到远程仓库
+再参考**添加远程仓库**
+
+### 忽略文件
+
+.gitignore文件中加入希望被忽略的文件
+
+### 撤销操作
+
+```bash
+git commit --amend
 ```
-git remote add origin [项目].git
+
+
+
+### 创建新的分支
+
 ```
+git branch [分支名]
+```
+
+
 
 
 
