@@ -23,7 +23,7 @@ git remote show origin
 ### 查看commit历史
 
 ```
-git log 
+git log --oneline 
 ```
 
 参数： 
@@ -50,7 +50,7 @@ git fetch
 
 ### 推送数据到远程仓库
 
-```
+```bash
 git push origin master
 ```
 
@@ -90,33 +90,6 @@ git push origin master
         url = https://[用户名]:[密码]@github.com/[项目].git
 ```
 
-### 恢复文件到本地
-
-```
-git checkout [文件]
-git checkout .
-```
-
-
-### 初始化本地项目
-
-```
-git init
-```
-这时候本地会多一个.git文件夹，项目已经创建完成了。
-
-再参考**添加远程仓库**
-
-### 忽略文件
-
-.gitignore文件中加入希望被忽略的文件
-
-### 撤销操作
-
-```bash
-git commit --amend
-```
-
 
 
 ### 创建新的分支
@@ -125,6 +98,52 @@ git commit --amend
 git branch [分支名]
 ```
 
+### 版本回退
+
+本地回退到某个版本
+```
+git reset --hard [commit ID] 
+```
+本地回退到上一个版本
+```
+git reset --hard HEAD^
+```
+强行把本地的提交到远程
+```
+git push -f -u origin master
+```
+
+## 本地操作
+
+### 初始化本地项目
+
+```
+git init
+```
+这时候本地会多一个.git文件夹，项目已经创建完成了。  
+
+再参考**添加远程仓库**
+
+### 忽略文件
+
+.gitignore文件中加入希望被忽略的文件  
+可以使用通配符
+
+### 撤销操作
+
+撤销上一次提交  并将暂存区文件重新提交
+```bash
+git commit --amend
+```
+
+
+
+### 恢复文件到本地
+
+```bash
+git checkout [文件]
+git checkout .
+```
 
 
 
