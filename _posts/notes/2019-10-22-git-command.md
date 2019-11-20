@@ -47,7 +47,6 @@ git remote add origin git@github.com:jiangph2016/仓库名.git
 git fetch
 ```
 
-
 ### 推送数据到远程仓库
 
 ```bash
@@ -92,11 +91,7 @@ git push origin master
 
 
 
-### 创建新的分支
 
-```
-git branch [分支名]
-```
 
 ### 版本回退
 
@@ -114,6 +109,19 @@ git push -f -u origin master
 ```
 
 ## 本地操作
+
+### 创建新的分支
+
+```
+git branch [分支名]
+```
+
+### 切换分支
+
+```
+git checkout [分支名]
+```
+这时候本地的文件会被立刻修改！
 
 ### 初始化本地项目
 
@@ -135,8 +143,6 @@ git init
 ```bash
 git commit --amend
 ```
-
-
 
 ### 恢复文件到本地
 
