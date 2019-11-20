@@ -71,6 +71,12 @@ keywords: git
 ### 在线联系正则表达式
 <https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md>
 
+### 500 lines or less
+<https://github.com/aosabook/500lines>
+
+### 500 lines or less中文版
+<https://github.com/HT524/500LineorLess_CN>
+
 ## 备用
 
 ### 空项目模板
