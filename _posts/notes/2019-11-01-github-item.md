@@ -77,6 +77,8 @@ keywords: git
 ### 500 lines or less中文版
 <https://github.com/HT524/500LineorLess_CN>
 
+### 史上最大规模1.4亿中文知识图谱
+<https://github.com/ownthink/KnowledgeGraphData>
 ## 备用
 
 ### 空项目模板

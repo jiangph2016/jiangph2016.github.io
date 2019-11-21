@@ -22,7 +22,14 @@ type: page
 
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 
-- 
+
+
+
+## 优秀文档
+
+- [Matplotlib 可视化最有价值的 50 个图表（附完整 Python 源代码）](https://zhuanlan.zhihu.com/p/53308606)
+
+- [Pro Git](https://www.progit.cn/)
 
 ## 待确认
 
