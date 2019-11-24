@@ -80,6 +80,10 @@ keywords: git
 ### 史上最大规模1.4亿中文知识图谱
 <https://github.com/ownthink/KnowledgeGraphData>
 
+### 目标检测库Detectron2
+<https://github.com/facebookresearch/detectron2>  
+安利页：[GitHub趋势榜第一：超强PyTorch目标检测库Detectron2，发布5天标星3100](https://zhuanlan.zhihu.com/p/87027304)
+
 ## 备用
 
 ### 空项目模板
