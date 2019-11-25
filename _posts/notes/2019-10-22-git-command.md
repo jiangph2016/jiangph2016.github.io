@@ -1,6 +1,6 @@
 ---
 layout: post
-title: git命令笔记
+title: Git命令笔记
 category: 笔记
 tags: git
 keywords: git
@@ -196,8 +196,13 @@ git branch [分支名]
 git checkout [分支名]
 ```
 这时候本地的文件会被立刻修改！  
-### 拉取远程分支到本地并切换
 
+### 拉取远程分支
+
+```
+git pull origin [远程分支名]:[本地分支名]
+```
+下面那条命令上次执行时出了问题，待确认
 ```
 git checkout -b [分支名] origin/[分支名]
 ``` 
