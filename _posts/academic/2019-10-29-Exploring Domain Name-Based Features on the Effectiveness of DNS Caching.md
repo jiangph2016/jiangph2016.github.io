@@ -9,6 +9,15 @@ keywords: domains dns once-used 一次性域名
 * content
 {:toc}
 
+
+类型|内容
+--|--
+标题|Exploring Domain Name Based Features on the Effectiveness of DNS Caching
+时间|2017
+会议|ACM SIGCOMM Computer Communication Review
+DOI|10.1145/3041027.3041032
+引用信息|Hao S, Wang H. Exploring domain name based features on the effectiveness of dns caching[J]. ACM SIGCOMM Computer Communication Review, 2017, 47(1): 36-42.
+
 这篇文章的题目翻译成中文应是《基于dns缓存有效性的域名特征研究》，读起来比较拗口，但其本质目的在于根据域名的特征将域名划分为两类：一次性域名（disposable domains/one-time-used domains/once-used domains）和可重用域名(reused domains)，并且让DNS缓存器不再缓存一次性域名以提高性能。
 
 文章中提到DNS是互联网中的一项基本的服务，所以其在互联网中的流量很少受到阻塞。于是在互联网上就发现了对DNS的滥用情况，这种滥用情况就是利用大量的一次性域名来传递消息。
