@@ -2,7 +2,7 @@
 layout: post
 title: ubuntu系统或Kali系统快速安装pip3
 category: 技巧
-tags: Linux
+tags: python
 keywords: pip3,python
 ---
 

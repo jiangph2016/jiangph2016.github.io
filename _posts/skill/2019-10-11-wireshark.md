@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用wireshark抓包
+title: wireshark过滤器规则
 category: 技巧
 tags: web
 keywords: wireshark
@@ -37,6 +37,7 @@ http.request.method=="GET"
 http.request.method=="POST"
 http.request.uri contains admin   #url中包含admin的
 http.request.code==404    #http请求状态码的
+http contains "Content-Type:" #包含Content-Type的
 ```
 ### 连接符
 ```
