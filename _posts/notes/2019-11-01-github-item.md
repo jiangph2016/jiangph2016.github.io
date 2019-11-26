@@ -84,6 +84,12 @@ keywords: git
 <https://github.com/facebookresearch/detectron2>  
 安利页：[GitHub趋势榜第一：超强PyTorch目标检测库Detectron2，发布5天标星3100](https://zhuanlan.zhihu.com/p/87027304)
 
+### Android开源项目合集
+<https://github.com/open-android/Android>
+
+### 机器学习or深度的学习のCheat sheet
+
+
 ## 备用
 
 ### 空项目模板
