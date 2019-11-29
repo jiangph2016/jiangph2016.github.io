@@ -5,6 +5,8 @@ category: 技巧
 tags: python
 keywords: colab
 ---
+* content
+{:toc}
 
 [Colaboratory](https://colab.research.google.com)，以下简称colab。相当于一个云端的带GPU的jupyter   
 ![colab](/assets/img/skill/colab.jpg)  
