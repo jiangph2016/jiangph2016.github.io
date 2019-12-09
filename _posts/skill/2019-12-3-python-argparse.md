@@ -9,7 +9,7 @@ keywords: python,argparse
 {:toc}
 
 ## 简介
-这个库用于参数解析  
+这个库用于命令行参数解析  
 
 ```python
 import argparse
@@ -30,8 +30,6 @@ print(args.a)
 
 
 ## 参数中的可选的设置
-
-
 
 ### default
 
