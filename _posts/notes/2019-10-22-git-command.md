@@ -179,6 +179,36 @@ git rm [文件名]
 ```
 而`git rm --cached [文件名]`仅仅从暂存区删掉文件
 
+### 暂存stash
+
+在不提交当前内容到仓库的情况下，将当前的文件内容入栈  
+此操作会导致当前的文件内容被立即更改
+```
+git stash
+git stash save "注释"
+```
+查看栈里面的内容
+```
+git stash list
+```
+将栈中的内容弹出(最近的)，应用到当前分支对应的工作目录
+```
+git stash pop
+```
+只应用，不弹出
+```
+git stash apply
+```
+清除stash
+```
+git stash drop + 名称 #清除指定的
+git stash clear #全部清除
+```
+查看stash和当前目录的差异
+```
+git stash show
+```
+
 ## 分支操作
 
 ### 查询分支
