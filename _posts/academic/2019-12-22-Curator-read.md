@@ -18,4 +18,18 @@ keywords: curator,集群,存储
 DOI|未知
 引用|Cano I, Aiyar S, Arora V, et al. Curator: Self-managing storage for enterprise clusters[C]//14th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 17). 2017: 51-66.
 
-### 速读
+### 概览
+
+作者构建了一个名为Curator的分布式集群存储管理系统。
+拥有以下功能：
+- 数据迁移
+- 数据备份
+- 磁盘平衡
+- 垃圾回收
+
+这个系统在应用后相比于没有应用的情况下
+
+
+### 不足
+没有与其他的集群存储管理系统进行横向对比
+

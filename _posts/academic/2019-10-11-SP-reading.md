@@ -2,7 +2,7 @@
 layout: post
 title: 2019 IEEE Symsium on Security and Privac论文粗读
 category: 学术
-tags: 论文
+tags: 粗读
 keywords: S&P
 ---
 

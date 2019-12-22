@@ -2,7 +2,7 @@
 layout: post
 title: 28th USENIX Security Symposium论文粗读
 category: 学术
-tags: 论文
+tags: 粗读
 keywords: usenix
 ---
 * content
