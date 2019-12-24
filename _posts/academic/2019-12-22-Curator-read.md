@@ -22,7 +22,7 @@ DOI|未知
 
 作者构建了一个名为Curator的分布式集群存储管理系统。
 拥有以下功能：
-- 数据迁移（HHD和SSD之间迁移）
+- 数据迁移
 - 恢复任务
 - 空间回收
 - 数据转换
@@ -66,7 +66,7 @@ DOI|未知
 
 ### 数据转换（Data Transformation）
 
-目的：节省存储空间
+目的：节省存储空间  
 **压缩（C，Compression）和纠删码（EC，Erasure Coding）**
 **重复数据删除（DD,Deduplication）**：在扫描时，Curator根据指纹检测出重复的数据，并通知DSF执行重复数据删除。
 **快照树深度缩减（STR，Snapshot Tree Reduction）**：

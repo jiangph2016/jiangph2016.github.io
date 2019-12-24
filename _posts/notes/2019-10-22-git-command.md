@@ -105,9 +105,6 @@ git push origin master
 .gitignore文件中加入希望被忽略的文件  
 可以使用通配符
 
-
-
-
 ### 版本回退
 
 本地仓库回退到某个版本
@@ -136,13 +133,24 @@ git init
 
 ### 撤销commit
 
-
-
 撤销上一次提交  并将暂存区文件重新提交
 ```bash
 git commit --amend
 ```
 
+### commit管理
+管理最近4次commit
+```
+git rebase -i HEAD~4
+```
+此命令会进入vi编辑器，有如下命令：
+- p, pick :默认选项就是这个
+- r, reword = use commit, but edit the commit message
+- e, edit = use commit, but stop for amending
+- s, squash :把这一次的commit合并到上面那个commit中
+- f, fixup = like “squash”, but discard this commit’s log message
+- x, exec = run command (the rest of the line) using shell
+- d, drop :丢弃掉这一次commit（此操作会导致这次commit修改的内容也丢失！）
 
 
 ## 管理本地文件和暂存区
@@ -209,6 +217,15 @@ git stash clear #全部清除
 git stash show
 ```
 
+### 按操作回退
+
+先查看每一步操作的历史
+```
+git reflog
+git reset --hard <ID>
+```
+
+
 ## 分支操作
 
 ### 查询分支
@@ -259,3 +276,19 @@ git checkout dev
 git merge master
 git push origin dev
 ```
+
+2. 当前的操作出现错误，想回退到远程仓库的样子
+
+第一种方法：
+```
+git stash
+git stash drop + 名称
+```
+第二种方法：
+```
+git fetch --all
+git reset --hard origin/master
+git pull
+```
+git fetch 只是下载远程的库的内容，不做任何的合并   
+git reset 把HEAD指向刚刚下载的最新的版本

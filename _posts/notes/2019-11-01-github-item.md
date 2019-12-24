@@ -40,6 +40,25 @@ keywords: git
 <https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes>
 
 
+### Python库-人脸识别 
+30.7k，兼容树莓派  
+<https://github.com/ageitgey/face_recognition>
+
+### 超轻量的人脸检测系统
+<https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB>
+
+### 目标检测库Detectron2
+<https://github.com/facebookresearch/detectron2>  
+安利页：[GitHub趋势榜第一：超强PyTorch目标检测库Detectron2，发布5天标星3100](https://zhuanlan.zhihu.com/p/87027304)
+
+### 动手深度学习
+英文版即伯克利“深度学习导论”教材。  
+<https://github.com/d2l-ai/d2l-zh>  
+在线地址：<http://zh.d2l.ai/>
+
+### PaddlePaddle
+<https://github.com/PaddlePaddle/models>
+
 ## 技术
 
 ### 中国特色的弱口令生成器
@@ -80,18 +99,32 @@ keywords: git
 ### 史上最大规模1.4亿中文知识图谱
 <https://github.com/ownthink/KnowledgeGraphData>
 
-### 目标检测库Detectron2
-<https://github.com/facebookresearch/detectron2>  
-安利页：[GitHub趋势榜第一：超强PyTorch目标检测库Detectron2，发布5天标星3100](https://zhuanlan.zhihu.com/p/87027304)
-
 ### Android开源项目合集
 <https://github.com/open-android/Android>
 
 ### 机器学习or深度的学习のCheat sheet
 
+缺失！！
 
 ### 正则表达式
 <https://github.com/ziishaned/learn-regex>
+
+### fast-api
+<https://github.com/tiangolo/fastapi>
+
+### post-woman
+
+<https://github.com/liyasthomas/postwoman>
+
+在线地址：<https://postwoman.io/>
+
+### python的httpx库
+据说用于取代requests,但目前github的星较少  
+<https://github.com/encode/httpx>
+
+### python3 爬虫讲解
+<https://github.com/wistbean/learn_python3_spider>
+
 
 ## 备用
 
@@ -102,6 +135,9 @@ keywords: git
 ### 弱口令字典
 
 <https://github.com/Stardustsky/SaiDict>
+
+### you-get 视频下载
+<https://github.com/soimort/you-get>
 
 ## 搞笑
 
@@ -119,3 +155,4 @@ keywords: git
 
 ### 5秒写作
 <https://github.com/maebert/themostdangerouswritingapp>
+
