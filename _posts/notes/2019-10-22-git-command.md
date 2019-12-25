@@ -226,6 +226,7 @@ git reset --hard <ID>
 ```
 
 
+
 ## 分支操作
 
 ### 查询分支
@@ -292,3 +293,33 @@ git pull
 ```
 git fetch 只是下载远程的库的内容，不做任何的合并   
 git reset 把HEAD指向刚刚下载的最新的版本
+
+3. 误上传大文件（或敏感文件） 
+
+在git里想永久删除一个文件真的是很麻烦的一个事情，如果只是用`git rm`来操作的话，文件只是在当前的commit里被删除了  
+实际上它还存在仓库里面，一是占据不必要的存储空间，二是别人拉取的速度会变慢（特指大文件）！！  
+
+官方的方法介绍在此:[Removing sensitive data from a repository](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository)  
+
+第一种方法是使用**BFG**工具，这是一个git清理工具，下载地址：<https://rtyley.github.io/bfg-repo-cleaner/>
+```
+java -jar bfg-1.13.0.jar --delete-files <文件名>
+即
+bfg --delete-files <文件名>
+```
+第二种方法是使用filter-branch  
+下面这条命令由github给出，特别的长
+```
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch <完整的文件路径名！>" \
+  --prune-empty --tag-name-filter cat -- --all
+```
+如果看到rewrite说明成功了，如果出现unchanged则没找到该文件  
+最后`-f`强制推送到远程仓库  
+
+最后强制解除对本地存储库中的所有对象的引用（暂时也读不太懂这句话到底啥意思）和执行垃圾回收操作：
+```
+git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
+git reflog expire --expire=now --all
+git gc --prune=now
+```

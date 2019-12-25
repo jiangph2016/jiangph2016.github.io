@@ -161,7 +161,9 @@ keywords: S&P
 
 ### *Beyond Credential Stuffing:Password Similarity Models using Neural Networks
 
-撞库攻击很普遍，因为很多人都会选择在很多的网站上使用相同的密码。这篇文章的作者训练了一个密码相似性模型，构造了一个目前最具破坏性的攻击。只要知道用户其中的一个密码，就可以在不到1000次猜测中破坏超过16%的账户。
+因为用户会在不同的网站使用相同或相似的密码，所以作者训练了一个模型来模拟人类选择相似密码的过程（训练数据来自于14亿份泄露的邮箱和密码），并声称构造了一个迄今为止最具破坏性的攻击模型。模拟结果表明在超过16%的情况下，只需要知道该用户的一个密码，就能在1000次猜测内猜出用户其他的密码。  
+接着作者给出了防御方法，使用个性化密码强度计（PPSM,personalized password strengthmeters）来评估密码的安全度，该强度计可以压缩到小于3MB以便于部署。
+
 
 ### The 9 Lives of Bleichenbacher’s CAT:New Cache ATtacks on TLS Implementations
 
