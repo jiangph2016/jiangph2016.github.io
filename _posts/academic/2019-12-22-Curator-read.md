@@ -10,24 +10,34 @@ keywords: curator,集群,存储
 {:toc}
 
 
-类型|内容  
---|--  
-标题|Curator:Self-Managing Storage for Enterprise Clusters
-时间|2017
-会议|Symposium on Network System Design and Implementation
-DOI|未知
-引用|Cano I, Aiyar S, Arora V, et al. Curator: Self-managing storage for enterprise clusters[C]//14th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 17). 2017: 51-66.
+类型   |内容  
+-- |--  
+标题 |Curator:Self-Managing Storage for Enterprise Clusters
+时间 |2017
+会议 |Symposium on Network System Design and Implementation
+引用 |Cano I, Aiyar S, Arora V, et al. Curator: Self-managing storage for enterprise clusters[C]//14th {USENIX} Symposium on Networked Systems Design and Implementation ({NSDI} 17). 2017: 51-66.
 
 ## 概览
 
 作者构建了一个名为Curator的分布式集群存储管理系统。
-拥有以下功能：
+它拥有以下功能：
 - 数据迁移
 - 恢复任务
 - 空间回收
 - 数据转换
 
-这套系统在客户的集群中应用后，有明显的性能提升（主要表现在IO延迟的减少），和稳定性的提升
+这套系统在客户的集群中应用后，有明显的性能提升（主要表现在IO延迟的减少）和稳定性的提升。
+
+
+## 背景
+作者组成：2名来自华盛顿大学，8名来自Nutanix公司。
+
+[Nutanix](https://www.nutanix.cn/)（路坦力）公司在2009年成立，是一家提供超融合解决方案的设备厂商，他们的产品有两种形态：1、捆绑式的硬件 + 软件设备，2、纯软件模式  
+它在2013年进入中国市场，2016年和联想合作
+  
+在2017年发表的文章[SDN实战团分享（三十三）：Nutanix超融合之架构设计](https://www.sdnlab.com/18555.html)里面就已经讲到了Curator，作为超融合集群中的一个组件来运行。
+
+Curator将负责整个集群中存储的管理和分配，包括磁盘平衡、主动清理等任务。每个节点上d都会运行Curator进程，而且受主Curator的控制，主Curator会负责任务和作业的委派。
 
 ## 结构
 ![curator1](/assets/img/academic/curator1.png)
@@ -110,18 +120,19 @@ Curator关闭时，所有数据优先存入SSD，在125分钟左右时存满，�
 
 当Curator打开时，延迟平均为12毫秒，关闭时，延迟平均为62毫秒。如果禁用Curator，随着时间的增长，延迟会逐渐增加。 推测这是因为SSD已经满了，所以新来的数据直接写入HDD，因此在读写操作时会产生较高的延迟。
 
-当Curator打开时，CPU使用率会略高。 这是由于Curator内部的mapReduce基础结构导致的。
+当Curator打开时，CPU使用率会略高。 这是由于Curator内部的mapReduce架构导致的。
 ![1](/assets/img/academic/curator9.png)
 
 ## 基于机器学习的改进
 
 作者使用Q-learning算法对Curator进行了改进，但是这项技术尚未部署到Curator上。
 
-Q-learning方法在IOPS的数量方面有可接受的增长，但转化为显著的延迟减少。
+Q-learning方法在IOPS的数量方面有一定的增长，但延迟却显著的减少。
 ![1](/assets/img/academic/curator7.png)
 
 ## 不足
-没有与其他的集群存储管理系统进行横向对比
+
+仅讲解了自己系统的设计方案和性能，而没有与其他的集群存储管理系统的性能进行横向对比
 
 
 
