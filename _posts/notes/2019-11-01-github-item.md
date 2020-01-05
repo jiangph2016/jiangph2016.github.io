@@ -156,3 +156,5 @@ keywords: git
 ### 5秒写作
 <https://github.com/maebert/themostdangerouswritingapp>
 
+## mac版微信拓展
+<https://github.com/MustangYM/WeChatExtension-ForMac>
