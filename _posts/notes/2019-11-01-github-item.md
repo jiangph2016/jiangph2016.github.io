@@ -158,3 +158,7 @@ keywords: git
 
 ## mac版微信拓展
 <https://github.com/MustangYM/WeChatExtension-ForMac>
+
+## 玛丽苏编码  
+
+<https://github.com/atonasting/marysue-encoder>

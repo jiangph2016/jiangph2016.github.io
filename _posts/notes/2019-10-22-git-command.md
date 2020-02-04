@@ -18,7 +18,7 @@ keywords: git
 - 本地仓库
 - 远程仓库
 ![](/assets/img/notes/git.jpg)
-## 管理远程仓库
+![](/assets/img/notes/git-map.jpg)
 
 ### 添加远程仓库
 
@@ -32,24 +32,8 @@ git remote -v
 git remote show origin 
 ```
 
-### 查看commit历史
-
-```
-git log --oneline 
-```
-
-参数： 
-
-- -p 显示每次提交引入的差异
-- --grep 只输出包含指定字符串的提交
-- --since --after指定日期之后的提交
-- --until --befofe 指定日期之前的提交
-- --committer 查看指定作者的提交
-- --name-only
-
-
-
 ### 从远程仓库拉取数据
+数据会到暂存区，需要再用merge来进行合并
 
 ```
 git fetch
@@ -59,7 +43,7 @@ git fetch
 
 会把master分支推送到远程仓库上的master分支
 
-```bash
+```
 git push origin master
 ```
 
@@ -105,20 +89,7 @@ git push origin master
 .gitignore文件中加入希望被忽略的文件  
 可以使用通配符
 
-### 版本回退
 
-本地仓库回退到某个版本
-```
-git reset --hard [commit ID] 
-```
-本地回退到上一个版本，HEAD^代表上一个版本，HEAD^^表示上上个版本
-```
-git reset --hard HEAD^
-```
-强行把本地的提交到远程
-```
-git push -f origin master
-```
 
 ## 管理本地仓库
 
@@ -131,12 +102,27 @@ git init
 
 再参考**添加远程仓库**
 
-### 撤销commit
+### 重新commit
 
-撤销上一次提交  并将暂存区文件重新提交
+重新commit，此次提交会覆盖上一次commit
 ```bash
 git commit --amend
 ```
+
+### 查看commit历史
+
+```
+git log --oneline 
+```
+
+参数： 
+
+- -p 显示每次提交引入的差异
+- --grep 只输出包含指定字符串的提交
+- --since --after指定日期之后的提交
+- --until --befofe 指定日期之前的提交
+- --committer 查看指定作者的提交
+- --name-only
 
 ### commit管理
 管理最近4次commit
@@ -153,7 +139,27 @@ git rebase -i HEAD~4
 - d, drop :丢弃掉这一次commit（此操作会导致这次commit修改的内容也丢失！）
 
 
-## 管理本地文件和暂存区
+## 误操作处理
+
+### 关于reset
+reset命令将HEAD指向给定的输入，如HEAD^,HEAD^^  
+
+使用`--hard`对本地文件和暂存区进行重置
+```
+git reset --hard HEAD
+git reset --hard HEAD^
+```
+使用`--soft`时则暂存区和本地文件不会修改  
+
+如果不加东西则默认为`mixed`模式，暂存区更改，本地文件不更改  
+注意reset只影响被track过的文件，所以需要clean命令来清除没有track过的文件  
+
+```
+git clean -n #显示要删除的文件，但不真正的删除
+git clean -f #删除没被track的文件（不包含gitignore)
+git clean -df #删除文件和文件夹
+git clean -xf #删除一切没有被track的文件
+```
 
 ### 撤销add命令
 
@@ -177,6 +183,32 @@ git rm --cached [文件名]
 git checkout [文件名]
 git checkout .
 ```
+### 版本回退
+
+本地回退到某个版本
+```
+git reset --hard [commit ID] 
+```
+本地回退到上一个版本，HEAD^代表上一个版本，HEAD^^表示上上个版本
+```
+git reset --hard HEAD^
+git reset --hard HEAD1
+```
+在执行完上面的命令后，HEAD也会跟着改变  
+强行提交到远程仓库
+```
+git push -f origin master
+```
+
+### 按操作回退
+
+先查看每一步操作的历史
+```
+git reflog
+git reset --hard <ID>
+```
+
+## 本地仓库操作
 
 ### 删除文件
 
@@ -186,6 +218,7 @@ git checkout .
 git rm [文件名]
 ```
 而`git rm --cached [文件名]`仅仅从暂存区删掉文件
+
 
 ### 暂存stash
 
@@ -217,15 +250,6 @@ git stash clear #全部清除
 git stash show
 ```
 
-### 按操作回退
-
-先查看每一步操作的历史
-```
-git reflog
-git reset --hard <ID>
-```
-
-
 
 ## 分支操作
 
@@ -243,7 +267,8 @@ git branch [分支名]
 ```
 git checkout [分支名]
 ```
-这时候本地的文件会被立刻修改！  
+这时候本地文件会立刻切换成该分支的状态！  
+需要保证此时所有文件都被提交过，否则会丢失，需要用stash命令来暂存    
 
 ### 拉取远程分支
 
@@ -317,7 +342,7 @@ git filter-branch --force --index-filter \
 如果看到rewrite说明成功了，如果出现unchanged则没找到该文件  
 最后`-f`强制推送到远程仓库  
 
-最后强制解除对本地存储库中的所有对象的引用（暂时也读不太懂这句话到底啥意思）和执行垃圾回收操作：
+最后强制解除对本地存储库中的所有对象的引用（暂时读不太懂这句话）和执行垃圾回收操作：
 ```
 git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
 git reflog expire --expire=now --all
