@@ -41,7 +41,7 @@ data[0]为数据的第一行。reshape是对矩阵进行变化，-1是不指定�
 poly_reg = PolynomialFeatures(degree=5)
 x_poly = poly_reg.fit_transform(data[0].reshape(-1,1))
 ```
-转换后的效果如下图所示
+转换后的效果如下图所示  
 ![](/assets/img/study/nCov1.png)
 
 
@@ -147,5 +147,10 @@ if __name__ == "__main__":
     data =read_data()
     clf = LinearRegression()
     predict(clf,data)
-    
+
 ```
+
+
+### 参考
+
+[Sklearn实现非线性回归](https://blog.csdn.net/js021x/article/details/94912303)
