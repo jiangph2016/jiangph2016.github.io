@@ -2,7 +2,7 @@
 layout: post
 title: Colaboratory上传和下载文件
 category: 技巧
-tags: python
+tags: Python
 keywords: colab
 ---
 * content

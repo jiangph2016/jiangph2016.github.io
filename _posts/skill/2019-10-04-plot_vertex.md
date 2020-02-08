@@ -2,7 +2,7 @@
 layout: post
 title: matplotlib画水平线/竖直线
 category: 技巧
-tags: python
+tags: Python
 keywords: matplotlib
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 使用numpy读取csv文件
 category: 技巧
-tags: python
+tags: Python
 keywords: python,csv
 ---
 * content

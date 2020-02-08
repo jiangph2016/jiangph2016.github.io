@@ -2,7 +2,7 @@
 layout: post
 title: Python库argparse
 category: 技巧
-tags: python
+tags: Python
 keywords: python,argparse
 ---
 * content
