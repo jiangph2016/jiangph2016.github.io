@@ -19,6 +19,21 @@ keywords: git
 - 远程仓库
 ![](/assets/img/notes/git.jpg)
 ![](/assets/img/notes/git-map.jpg)
+## 远程仓库操作
+
+### 配置ssh登录
+1. 在本地的~/.ssh文件夹下，生成SSH Key
+```
+ssh-keygen -t rsa -C "登录的邮箱"
+```
+2. 生成并添加SSH Key(此步骤不做也可以)
+```
+ssh-add ~/.ssh/id_rsa
+```
+3. 查看SSH Key并复制到Github账户的设置中
+```
+cat id_rsa.pub
+```
 
 ### 添加远程仓库
 

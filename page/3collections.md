@@ -17,7 +17,20 @@ type: page
 
 
 
+## 有趣的网址
 
+- [工地海报生成器](https://m.photofunia.com/categories/all_effects/reconstruction)
+- [二维码生成](https://cli.im/mob)
+- [编码错误](https://www.qqxiuzi.cn/zh/luanma/)
+- [Pornhub图标生成](https://lab.bangbang93.com/porn-hub)
+- [Pornhub生成（高级）](https://logoly.pro/#/vertical-ph)
+- [微博热搜图片生成](http://wb.newbfun.com/resou/main.html)
+- [需要我帮你百度吗](https://lmbtfy.cn/)
+- [动图表情](https://app.xuty.tk/static/app/index.html)
+- [狗屁不通文章生成器](https://suulnnka.github.io/BullshitGenerator/index.html)
+- [人工智能对联](https://ai.binwang.me/couplet/)
+
+- [新冠病毒全球分布图](https://coronavirus.app/)
 ## 优秀博客学习
 
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)

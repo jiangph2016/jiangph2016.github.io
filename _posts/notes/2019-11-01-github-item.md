@@ -128,6 +128,9 @@ keywords: git
 
 ## 备用
 
+### 动态可视化
+
+<https://github.com/Jannchie/Historical-ranking-data-visualization-based-on-d3.js>
 ### 空项目模板
 
 <https://github.com/kelseyhightower/nocode>
