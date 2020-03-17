@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Exploring Domain Name-Based Features on the Effectiveness of DNS Caching 
-category: 学术
+title: 【精读】检测一次性域名，提高DNS缓存有效性
 tags: 论文
 keywords: domains,dns,一次性域名
 ---

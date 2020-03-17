@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MeshTrust:A CDN-centric Trust Model for Reputation Management on Video Traffic 
+title: 【精读】MeshTrust，以CDN为中心的信任模型
 category: 学术
 tags: 论文
 keywords: CDN

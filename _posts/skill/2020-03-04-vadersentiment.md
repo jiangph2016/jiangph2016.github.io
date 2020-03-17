@@ -7,8 +7,9 @@ keywords: vader
 ---
 * content
 {:toc}
-## 简介
 
+
+## 简介
 VADER（Valence-Aware Dictionary and mootion Reasoner）是一个词汇和基于规则的情感分析工具。
 
 

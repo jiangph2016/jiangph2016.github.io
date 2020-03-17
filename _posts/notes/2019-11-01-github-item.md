@@ -39,7 +39,6 @@ keywords: git
 
 <https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes>
 
-
 ### Python库-人脸识别 
 30.7k，兼容树莓派  
 <https://github.com/ageitgey/face_recognition>
@@ -58,6 +57,11 @@ keywords: git
 
 ### PaddlePaddle
 <https://github.com/PaddlePaddle/models>
+
+### cherry分类器
+<https://github.com/Windsooon/cherry>
+
+讲解<https://www.freebuf.com/articles/network/168850.html>
 
 ## 技术
 

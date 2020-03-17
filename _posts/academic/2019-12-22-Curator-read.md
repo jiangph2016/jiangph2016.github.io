@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Curator:Self-Managing Storage for Enterprise Clusters
+title: 【精读】Curator:企业集群存储管理系统
 category: 学术
 tags: 论文
 keywords: curator,集群,存储
