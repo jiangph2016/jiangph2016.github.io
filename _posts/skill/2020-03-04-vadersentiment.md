@@ -19,8 +19,8 @@ VADER（Valence-Aware Dictionary and mootion Reasoner）是一个词汇和基于
 发表于AAAI 2014  
  
 ### 安装
-地址：<https://pypi.org/project/vaderSentiment/>
-Github源码：<https://github.com/cjhutto/vaderSentiment>
+地址：<https://pypi.org/project/vaderSentiment/>  
+Github源码：<https://github.com/cjhutto/vaderSentiment>  
 安装方法: `pip install vaderSentiment`
 
 
@@ -42,10 +42,11 @@ for sentence in sentences:
 
 ### 输出
 ```
-This is awful---------------------------------------------------- {'neg': 0.6, 'neu': 0.4, 'pos': 0.0, 'compound': -0.4588}
-I like it-------------------------------------------------------- {'neg': 0.0, 'neu': 0.286, 'pos': 0.714, 'compound': 0.3612}
+This is awful---------------- {'neg': 0.6, 'neu': 0.4, 'pos': 0.0, 'compound': -0.4588}
+I like it-------------------- {'neg': 0.0, 'neu': 0.286, 'pos': 0.714, 'compound': 0.3612}
 ```
 
+存储形式是字典，通过字典调用各个变量
 ### 解释
 
 - neg 负面情绪

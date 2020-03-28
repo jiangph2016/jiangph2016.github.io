@@ -82,3 +82,11 @@ wc -w [文件名]  #文件字数
 wc -L [文件名]  #文件中最长行的长度
 wc --files0-from=[sample.txt] #从sample.txt中读取文件名列表
 ```
+
+
+## 检查配置文件语法 
+```
+jq . config.json
+```
+命令中的.不能省去
+

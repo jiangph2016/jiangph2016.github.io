@@ -2,7 +2,7 @@
 layout: post
 title: 【列表】会议列表
 category: 学术
-tags: 列表
+tags: 学术
 keywords: 列表
 ---
 * content

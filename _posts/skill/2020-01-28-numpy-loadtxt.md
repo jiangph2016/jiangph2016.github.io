@@ -11,7 +11,7 @@ keywords: python,csv
 
 ```
 with open("1.csv","r") as f:
-    np.loadtxt(f,delimiter = ",")
+    res = np.loadtxt(f,delimiter = ",")
 ```
 
 - delimiter 分隔符，默认是空格
