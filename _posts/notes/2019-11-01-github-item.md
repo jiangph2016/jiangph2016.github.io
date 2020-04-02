@@ -63,6 +63,9 @@ keywords: git
 
 讲解<https://www.freebuf.com/articles/network/168850.html>
 
+### sklearn中文文档
+<https://github.com/apachecn/sklearn-doc-zh>
+
 ## 技术
 
 ### 中国特色的弱口令生成器

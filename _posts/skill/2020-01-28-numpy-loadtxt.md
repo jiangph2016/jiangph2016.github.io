@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用numpy读取csv文件
+title: 【Python】csv文件的读写
 category: 技巧
 tags: Python
 keywords: python,csv
@@ -9,7 +9,21 @@ keywords: python,csv
 {:toc}
 
 
+## 使用传统csv模块
+
+其中newline在linux/mac系统下可不加，用于去除windows系统下的多余换行
 ```
+import csv
+with open(csvname,"a+",newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(content)
+```
+
+
+## 使用numpy
+
+```
+import numpy as np
 with open("1.csv","r") as f:
     res = np.loadtxt(f,delimiter = ",")
 ```

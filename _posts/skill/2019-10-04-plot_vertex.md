@@ -1,18 +1,41 @@
 ---
 layout: post
-title: matplotlib画水平线/竖直线
+title: 【Python】matplotlib画图
 category: 技巧
 tags: Python
 keywords: matplotlib
 ---
-
 用matplotlib画图像，首先导入两个必要的包
-```python
-
+```
 import matplotlib.pyplot as plt
 import numpy as np
+```
+## 添加图例
 
 ```
+plt.legend(['描述1','描述2'],loc = 'best',font_size = 10)
+```
+描述会自动匹配上，或者也可以指定
+```
+plt.legend((变量1,变量2),('描述1','描述2'))
+```
+
+
+位置有如下选项：
+- best
+- upper right
+- upper left
+- lower left
+- lower right
+- right
+- center left
+- center right
+- lower center
+- upper center
+- center
+
+
+## 画水平线和直线 
 
 首先使用np.linspace或者np.arange指定x的范围，然后将y表示为x的函数即可
 

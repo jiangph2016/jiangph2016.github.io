@@ -1,6 +1,6 @@
 ---
 layout: post
-title: vader-sentiment使用
+title: 【Python】vader-sentiment使用
 category: 技巧
 tags: Python
 keywords: vader
