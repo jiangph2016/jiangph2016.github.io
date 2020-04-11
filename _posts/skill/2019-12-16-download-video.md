@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 爬取高顿网校中受版权保护的视频
+title: 【Python】爬取高顿网校中受版权保护的视频
 category: 技巧
 tags: Python
 keywords: python,爬虫,视频,下载

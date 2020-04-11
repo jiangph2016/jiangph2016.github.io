@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 批量删除docker镜像（不通过id删除原始镜像）
+title: 【Linux】批量删除docker镜像（不通过id删除原始镜像）
 category: 技巧
 tags: docker
 keywords: docker,容器，镜像

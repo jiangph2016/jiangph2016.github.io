@@ -8,12 +8,28 @@ keywords: colab
 * content
 {:toc}
 
+在colab上写的python代码很多时候都有读取文件的需求，本以为将文件直接上传到Google Drive上就可以直接读取，但后来发现两个根本不在一套系统里。colab是每次启动的时候都会随机分配一个新的虚拟机给你，所以数据都不能保存 
+
+
+## 挂载云端硬盘
+
+
+
+```
+from google.colab import drive
+drive.mount('/content/drive/')
+import os
+os.chdir("/content/drive/My Drive/[文件夹]")
+```
+
+
+## 现用现传
 [Colaboratory](https://colab.research.google.com)，以下简称colab。相当于一个云端的带GPU的jupyter   
 ![colab](/assets/img/skill/colab.jpg)  
-## 上传文件
-在colab上写的python代码很多时候都有读取文件的需求，本以为将文件直接上传到Google Drive上就可以直接读取，但后来发现两个根本不在一套系统里。colab是每次启动的时候都会随机分配一个新的虚拟机给你，所以数据都不能保存  
+### 上传文件
 
-最简单的方法就是调用colab的库，运行的时候手动选择要上传的文件
+
+调用colab的库，运行的时候手动选择要上传的文件
 ```python
 from google.colab import files
 uploaded = files.upload()
@@ -35,7 +51,7 @@ print(file_list)
 输出是
 >['感知器数据.csv', '课表.xlsx']
   
-## 下载文件
+### 下载文件
 ```python
 from google.colab import files
 with open('123.txt', 'w') as f:

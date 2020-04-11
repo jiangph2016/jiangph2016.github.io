@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python】vader-sentiment使用
+title: 【Python】使用vader-sentiment进行文本的情感分析
 category: 技巧
 tags: Python
 keywords: vader

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用sklearn对武汉新型冠状病毒人数进行回归分析
+title: 【Python】使用sklearn对武汉新型冠状病毒人数进行回归分析
 category: 学习
 tags: 机器学习
 keywords: python,sklearn

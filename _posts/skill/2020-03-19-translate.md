@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用Python调用有道api实现文本翻译
+title: 【Python】调用有道api实现文本翻译
 category: 技巧
 tags: Python
 keywords: joblib,变量

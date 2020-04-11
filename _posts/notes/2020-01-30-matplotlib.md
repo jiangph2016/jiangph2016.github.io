@@ -1,6 +1,6 @@
 ---
 layout: post
-title: matplotlib画图笔记
+title: 【Python】matplotlib画图笔记
 category: 笔记
 tags: Python
 keywords: 笔记

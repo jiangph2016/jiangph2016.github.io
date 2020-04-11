@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【Python】ubuntu系统或Kali系统快速安装pip3
+title: 【Linux】ubuntu系统或Kali系统快速安装pip3
 category: 技巧
-tags: Python
+tags: Linux
 keywords: pip3,python
 ---
 
