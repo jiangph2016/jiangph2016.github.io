@@ -133,6 +133,12 @@ keywords: git
 <https://github.com/wistbean/learn_python3_spider>
 
 
+## 冷门备用
+
+## 流量特征提取
+使用scapy库提取pcap文件中的72个特征
+<https://github.com/fengtongtong/pcap_feature>
+
 ## 备用
 
 ### 动态可视化

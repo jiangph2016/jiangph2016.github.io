@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python】一些精炼的语句
+title: 【Python】一些小技巧
 category: 笔记
 tags: Python
 keywords: 技巧
