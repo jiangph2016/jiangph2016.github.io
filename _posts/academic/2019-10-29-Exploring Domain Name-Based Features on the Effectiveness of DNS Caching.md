@@ -57,11 +57,11 @@ TTL即Time-To-Live，代表一条域名解析记录（RR）在DNS服务器中的
 - F4:异常字段数量太多：许多字段可能异常的长或异常的短（LL-F:长度大于10的字段数量，SS-F:长度短于3的字段数量）
 
 如下图所示，给出了一些一次性域名的例子，他们分别满足不同的特征，在最右侧分别表明该条域名满足哪几条特征。
-![](/assets/img/academic/dns1.png)
+![](/assets/img/academic/dns/dns1.png)
 
 对于特征是否有效的验证：
 
-![](/assets/img/academic/dns2.png)
+![](/assets/img/academic/dns/dns2.png)
 ### Ground Truth
 **作者将数据集中提取的只出现过一次的域名标记为“一次性域名”。**  
 可能存在某些不常见的域名因为只被查询了一次导致被误标记为“一次性域名”，但是考虑到某一个地区的网络用户在数千人左右，所以对实际情况影响不大，因为这个域名记录的缓存可能在下一次查询之前就已经被淘汰了。
@@ -69,14 +69,14 @@ TTL即Time-To-Live，代表一条域名解析记录（RR）在DNS服务器中的
 ### 分类
 作者分别使用决策树和随机森林构建分类器。  
 分类结果如图所示：  
-![](/assets/img/academic/dns3.png)
+![](/assets/img/academic/dns/dns3.png)
 
 效果：
 - 85%-88%的一次性域名的解析记录能被正确的标记
 - 只有0.2%-1%的正常的域名解析记录被错误的标记
 
 单独观察每个特征的表现：
-![](/assets/img/academic/dns4.png)
+![](/assets/img/academic/dns/dns4.png)
 结论：
 - 所有特征都在分类中起着重要作用。
 - 通过将特征的组合可以降低错误率
@@ -90,7 +90,7 @@ TTL即Time-To-Live，代表一条域名解析记录（RR）在DNS服务器中的
 (这个值并不适用于ISP的DNS服务器，ISP服务器可能需要一个更大的值。)
 
 实验效果最后如图所示
-![](/assets/img/academic/dns5.png)
+![](/assets/img/academic/dns/dns5.png)
 
 
 结论：

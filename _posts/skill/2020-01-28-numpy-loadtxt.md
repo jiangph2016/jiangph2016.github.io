@@ -83,4 +83,16 @@ b = a[2:7:2]
 print(b)
 # 输出：2 4 6
 ```
- 
+
+
+### pandas
+
+```
+import pandas as pd
+
+df = pd.read_csv(filename,usecols=[要取的列名])
+df = pd.read_csv('1.csv',usecols=['teacher','student'])
+```
+**参数**：
+
+- **header** 指定行数作为列名，如果文件中没有列名，则默认为0
