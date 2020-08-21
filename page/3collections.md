@@ -11,10 +11,24 @@ type: page
 
 ## 工具
 
+- [kaggle](https://www.kaggle.com/datasets)
 - [鸠摩搜索](https://www.jiumodiary.com/)  
 万能的搜书平台
 - [在线pdf翻译](https://www.onlinedoctranslator.com/zh-CN/)
 
+- [API接口](https://api.66mz8.com/)
+- [付费API](https://www.apishop.net)
+
+- [Google Safe Browsing](https://safebrowsing.google.com/)
+- [Virustotal ](https://www.virustotal.com/gui/home/upload)  
+> 分析可疑文件和URL
+
+- [tsung](http://tsung.erlang-projects.org/)
+> 分布式压力测试工具
+
+
+- [Read The Docs](https://readthedocs.org/)
+> 创建、托管和浏览文档
 
 
 ## 有趣的网址
@@ -31,6 +45,9 @@ type: page
 - [人工智能对联](https://ai.binwang.me/couplet/)
 
 - [新冠病毒全球分布图](https://coronavirus.app/)
+
+- [淘宝买家秀福利](https://api.66mz8.com/document/rand.tbimg.php)
+
 ## 优秀博客学习
 
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
@@ -41,7 +58,6 @@ type: page
 ## 优秀文档
 
 - [Matplotlib 可视化最有价值的 50 个图表（附完整 Python 源代码）](https://zhuanlan.zhihu.com/p/53308606)
-
 - [Pro Git](https://www.progit.cn/)
 
 ## 待确认

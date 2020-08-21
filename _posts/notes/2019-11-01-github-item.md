@@ -66,7 +66,24 @@ keywords: git
 ### sklearn中文文档
 <https://github.com/apachecn/sklearn-doc-zh>
 
+### PaddleHub
+<https://github.com/paddlepaddle/paddlehub>  
+
+介绍文档：<https://www.paddlepaddle.org.cn/hublist?filter=en_category&value=SemanticModel>
+
+### Joyful-Pandas
+https://github.com/yeayee/joyful-pandas>
+
+### mmdetection 目标检测
+<https://github.com/open-mmlab/mmdetection>
+[项目文档](https://mmdetection.readthedocs.io/en/latest/)
+
 ## 技术
+
+### 爬虫靶子
+
+<https://gitee.com/crossin/purple_mountain>
+
 
 ### 中国特色的弱口令生成器
 
@@ -133,13 +150,39 @@ keywords: git
 <https://github.com/wistbean/learn_python3_spider>
 
 
+
+
+
 ## 冷门备用
 
-## 流量特征提取
+### 流量特征提取
 使用scapy库提取pcap文件中的72个特征
-<https://github.com/fengtongtong/pcap_feature>
+<https://github.com/fengtongtong/pcap_feature>  
+
+
+### DecryptLogin 模拟登陆
+<https://github.com/CharlesPikachu/DecryptLogin>
+[使用文档](https://httpsgithubcomcharlespikachudecryptlogin.readthedocs.io/zh/latest/)  
+
+### musicdl
+<https://github.com/CharlesPikachu/Music-Downloader>
+[使用文档](https://musicdl.readthedocs.io/zh/latest/)
+
+### python小项目
+<https://github.com/CharlesPikachu/Tools>
+
+### python游戏
+<https://github.com/CharlesPikachu/Games>
+
+### python玩AI游戏
+
+<https://github.com/CharlesPikachu/AIGames>
 
 ## 备用
+
+
+### joy特征提取  by Cisco
+<https://github.com/cisco/joy>
 
 ### 动态可视化
 
@@ -154,6 +197,17 @@ keywords: git
 
 ### you-get 视频下载
 <https://github.com/soimort/you-get>
+
+
+### 处理Excel文件
+<https://openpyxl.readthedocs.io/en/stable/tutorial.html>
+
+### 数据可视化Echarts
+<https://github.com/pyecharts/pyecharts>
+
+
+### pandas-profiling数据分析报告
+<https://github.com/pandas-profiling/pandas-profiling>
 
 ## 搞笑
 
@@ -172,9 +226,9 @@ keywords: git
 ### 5秒写作
 <https://github.com/maebert/themostdangerouswritingapp>
 
-## mac版微信拓展
+### mac版微信拓展
 <https://github.com/MustangYM/WeChatExtension-ForMac>
 
-## 玛丽苏编码  
-
+### 玛丽苏编码  
 <https://github.com/atonasting/marysue-encoder>
+

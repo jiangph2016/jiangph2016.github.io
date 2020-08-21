@@ -69,3 +69,34 @@ NDSS 2018
 
 
 原文地址: <https://dl.acm.org/doi/abs/10.1145/3308558.3313591>
+
+
+----
+
+
+## 社交网络相关
+<https://dl.acm.org/doi/proceedings/10.5555/3178876>
+
+### Session details: Social Network Analysis and Graph Algorithms for the Web
+<https://dl.acm.org/doi/10.5555/3178876.3258518>
+
+### RaRE: Social Rank Regulated Large-scale Network Embedding
+<https://dl.acm.org/doi/10.1145/3178876.3186102>
+
+### Minimizing Polarization and Disagreement in Social Networks
+<https://dl.acm.org/doi/10.1145/3178876.3186103>
+
+### SIR-Hawkes: Linking Epidemic Models and Hawkes Processes to Model Diffusions in Finite Populations
+
+<https://dl.acm.org/doi/10.1145/3178876.3186108>
+
+### A Correlation Clustering Framework for Community Detection
+<https://dl.acm.org/doi/10.1145/3178876.3186110>
+
+### Collective Classification of Spam Campaigners on Twitter: A Hierarchical Meta-Path Based Approach
+
+<https://dl.acm.org/doi/10.1145/3178876.3186119>
+
+### Demarcating Endogenous and Exogenous Opinion Diffusion Process on Social Networks
+
+<https://dl.acm.org/doi/10.1145/3178876.3186121>

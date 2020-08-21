@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在Mac下使用vscode来写LaTeX文件
+title: 【Mac】在Mac下使用vscode来写LaTeX文件
 category: 笔记
 tags: Mac
 keywords: 
