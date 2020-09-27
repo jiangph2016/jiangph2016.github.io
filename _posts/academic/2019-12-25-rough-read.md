@@ -67,36 +67,98 @@ NDSS 2018
 
 ### A First Look at Deep Learning Apps on Smartphones
 
-
 原文地址: <https://dl.acm.org/doi/abs/10.1145/3308558.3313591>
 
+### Detect Rumors on Twitter by Promoting Information Campaigns with Generative Adversarial Learning
+### Exploring User Behavior in Email Re-Finding Tasks
+### Exploiting Ratings, Reviews and Relationships for Item Recommendations in Topic Based Social Networks
+### Nonlinear diffusions for community detection and semi-supervised learning
+### Graph Neural Networks for Social Recommendation
+### Listening between the Lines: Learning Personal Attributes from Conversations
+### Stereotypical Bias Removal for Hate Speech Detection Task using Knowledge-based Generalizations
+### Cross-Network Embedding for Multi-Network Alignment
+### Anomaly detection in the dynamics of web and social networks using associative memory
+### From Small-scale to Large-scale Text Classification
+### CommunityGAN: Community Detection with Generative Adversarial Nets
+### BaG: Behavior-aware Group Detection in Crowded Urban Spaces using WiFi Probes
+### ContraVis: Contrastive and Visual Topic Modeling for Comparing Document Collections
+### Unsupervised Semantic Generative Adversarial Networks for Expert Retrieval
 
+### Revisiting User Mobility and Social Relationships in LBSNs: A Hypergraph Embedding Approach
+### To Return or to Explore: Modelling Human Mobility and Dynamics in Cyberspace
+### Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures
+### Keyphrase Extraction from Disaster-related Tweets
+### Unifying Knowledge Graph Learning and Recommendation: Towards a Better Understanding of User Preference
+### What happened? The Spread of Fake News Publisher Content During the 2016 Election
+### Quality Effects on User Preferences and Behaviors in Mobile News Streaming
+### Aspect-level Sentiment Analysis using AS-Capsules
+### The Silent Majority Speaks: Inferring Silent Users’ Opinions in Online Social Networks
+通过活跃用户发布的文本内容和用户关系来腿推断沉默用户在社交网络中的意见
+<https://dl.acm.org/doi/abs/10.1145/3308558.3313423>
+### Your Style Your Identity: Leveraging Writing and Photography Styles for Drug Trafficker Identification in Darknet Markets over Attributed Heterogeneous Information Network
+### Fuzzy Multi-task Learning for Hate Speech Type Identification
+### Learning clusters through information diffusion
+### A Novel Generative Topic Embedding Model by Introducing Network Communities
+### With a little help from my friends (and their friends): Influence neighborhoods for social recommendations
+---
+
+### A First Look at Deep Learning Apps on Smartphones
+### Web Experience in Operational Mobile Networks: Lessons from Two Million Page Visits
+×
+### Multistream Classification for Cyber Threat Data with Heterogeneous Feature Space
+×
 ----
 
 
-## 社交网络相关
+## WWW 2018
 <https://dl.acm.org/doi/proceedings/10.5555/3178876>
 
 ### Session details: Social Network Analysis and Graph Algorithms for the Web
 <https://dl.acm.org/doi/10.5555/3178876.3258518>
 
 ### RaRE: Social Rank Regulated Large-scale Network Embedding
-<https://dl.acm.org/doi/10.1145/3178876.3186102>
+<https://dl.acm.org/doi/10.1145/3178876.3186102>  
+传统的网络节点嵌入算法根据节点的连接属性，但是有些受欢迎的节点例如名人有大量的followers，所以文章提出了social rank，并提出新的网络嵌入模型，同时考虑基于邻近度和基于social rank。
+
 
 ### Minimizing Polarization and Disagreement in Social Networks
-<https://dl.acm.org/doi/10.1145/3178876.3186103>
+<https://dl.acm.org/doi/10.1145/3178876.3186103>  
+提出一个推荐系统来减少社交网络中的意见的两极分化
 
 ### SIR-Hawkes: Linking Epidemic Models and Hawkes Processes to Model Diffusions in Finite Populations
 
 <https://dl.acm.org/doi/10.1145/3178876.3186108>
 
 ### A Correlation Clustering Framework for Community Detection
+一个名为LAMBDACC的社区检测框架  
 <https://dl.acm.org/doi/10.1145/3178876.3186110>
 
 ### Collective Classification of Spam Campaigners on Twitter: A Hierarchical Meta-Path Based Approach
-
+检测Twitter上的垃圾邮件发送者
 <https://dl.acm.org/doi/10.1145/3178876.3186119>
 
 ### Demarcating Endogenous and Exogenous Opinion Diffusion Process on Social Networks
-
+OSN中的网络意见传播受两种类型的意见影响，分别是内在意见(endogenous opinion)和外在意见(exogenous opinion)。文章提出了CherryPick，对意见和用户进行划分  
 <https://dl.acm.org/doi/10.1145/3178876.3186121>
+
+
+## BM风险
+
+### SoK: Cyber Insurance – Technical Challenges and a System Security Roadmap
+
+
+## AsiaCCS
+<https://dblp.uni-trier.de/db/conf/asiaccs/index.html>  
+
+### TweetScore: Scoring Tweets via Social Attribute Relationships for Twitter Spammer Detection
+
+<https://dl.acm.org/doi/10.1145/3321705.3329836>
+
+### On the effectiveness of risk prediction based on users browsing behavior
+<https://dl.acm.org/doi/10.1145/2590296.2590347>
+
+
+## Other
+
+### Cyber Profiles Based Risk Prediction of Application Systems for Effective Access Control
+<https://ieeexplore.ieee.org/abstract/document/8969646>

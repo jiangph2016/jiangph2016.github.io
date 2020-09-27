@@ -78,6 +78,12 @@ https://github.com/yeayee/joyful-pandas>
 <https://github.com/open-mmlab/mmdetection>
 [项目文档](https://mmdetection.readthedocs.io/en/latest/)
 
+
+### 邱锡鹏老师NLP实战
+
+题目:<https://github.com/FudanNLP/nlp-beginner>  
+解答:<https://github.com/Alic-yuan/nlp-beginner-finish>
+
 ## 技术
 
 ### 爬虫靶子
@@ -144,13 +150,21 @@ https://github.com/yeayee/joyful-pandas>
 
 ### python的httpx库
 据说用于取代requests,但目前github的星较少  
+
 <https://github.com/encode/httpx>
 
 ### python3 爬虫讲解
 <https://github.com/wistbean/learn_python3_spider>
 
+### python黑魔法
+
+<https://github.com/iswbm/magic-python>
+
+手册：<http://magic.iswbm.com/zh/latest/>
 
 
+### 算法面试题
+<https://github.com/geekxh/hello-algorithm>
 
 
 ## 冷门备用
@@ -208,6 +222,10 @@ https://github.com/yeayee/joyful-pandas>
 
 ### pandas-profiling数据分析报告
 <https://github.com/pandas-profiling/pandas-profiling>
+
+### 代替正则的parse库
+[再见了，正则表达式 - 王炳明的文章 - 知乎](https://zhuanlan.zhihu.com/p/215189735)
+
 
 ## 搞笑
 
