@@ -72,7 +72,7 @@ keywords: git
 介绍文档：<https://www.paddlepaddle.org.cn/hublist?filter=en_category&value=SemanticModel>
 
 ### Joyful-Pandas
-https://github.com/yeayee/joyful-pandas>
+<https://github.com/yeayee/joyful-pandas>
 
 ### mmdetection 目标检测
 <https://github.com/open-mmlab/mmdetection>
@@ -226,6 +226,8 @@ https://github.com/yeayee/joyful-pandas>
 ### 代替正则的parse库
 [再见了，正则表达式 - 王炳明的文章 - 知乎](https://zhuanlan.zhihu.com/p/215189735)
 
+### Python 经典小例子
+<https://github.com/jackzhenguo/python-small-examples>
 
 ## 搞笑
 

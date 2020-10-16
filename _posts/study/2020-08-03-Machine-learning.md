@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【机器学习】使用sklearn库进行机器学习训练完整过程
+title: 【机器学习】使用sklearn库进行机器学习二分类任务
 category: 学习
 tags: 机器学习
 keywords: GBDT
@@ -12,11 +12,16 @@ keywords: GBDT
 - [【Python】sklearn的GBDT库](https://jiangph2016.github.io/2020/04/02/GBDT/)
 - [【Python】sklearn笔记](https://jiangph2016.github.io/2020/04/04/sklearn/)
 
-### 引用
+----
+
+- [sklearn各分类模型的比较](https://blog.csdn.net/Yellow_python/article/details/84885979)
+
+
+
+## 引用
 ```
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import GradientBoostingClassifier
 from imblearn.over_sampling import RandomOverSampler 
 from collections import Counter
 from sklearn.metrics import recall_score,f1_score,precision_score
@@ -44,18 +49,94 @@ def over_sample(X,y):
 
 
 ### 训练模型
+
+#### GBDT
 ```
-from sklearn.ensemble import GradientBoostingClassifier
+
 def GBDT():
+    from sklearn.ensemble import GradientBoostingClassifier
     gbr = GradientBoostingClassifier(n_estimators=200, max_depth=7,
                                      min_samples_split=2, learning_rate=0.1)
     gbr.fit(x_train, y_train)
     evaluate(gbr,x_train, x_test, y_train, y_test)
     return gbr
 ```
+#### LightGBM
+官方API：
+- <https://lightgbm.readthedocs.io/en/latest/Python-API.html#training-api>
+- <https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMClassifier.html>
+
+参考:
+- <https://www.cnblogs.com/chenxiangzhen/p/10894306.html>
+
+```
+def LightGBM(x_train,y_train,x_test,y_test):
+    from lightgbm import LGBMClassifier
+    gbm = LGBMClassifier(boosting_type='gbdt',max_depth=4,n_estimators=100)
+    gbm.fit(x_train, y_train)
+    evaluate(gbm,x_train, x_test, y_train, y_test,"LightGBM")
+    
+    return gbm
+```
+
+#### SVM
+```
+def LinearSVM(x_train,y_train,x_test,y_test):
+    from sklearn.svm import LinearSVC
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.pipeline import make_pipeline
+    svm_clf = make_pipeline(StandardScaler(), LinearSVC())
+    svm_clf.fit(x_train,y_train)
+    evaluate(svm_clf,x_train, x_test, y_train, y_test,"Linear SVM")
+    return svm_clf
+```
 
 
-### 输出
+```
+def RBFSVM(x_train,y_train,x_test,y_test):
+    from sklearn.svm import SVC
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.pipeline import make_pipeline
+    svm_clf = make_pipeline(StandardScaler(), SVC(gamma=2, C=1))
+    svm_clf.fit(x_train,y_train)
+    evaluate(svm_clf,x_train, x_test, y_train, y_test,"RBFSVM")
+    return svm_clf
+```
+
+
+
+#### LogisticRegression
+
+```
+def LR(x_train,y_train,x_test,y_test):
+    from sklearn.linear_model import LogisticRegression
+    lr_model = LogisticRegression()
+    lr_model.fit(x_train,y_train)
+    evaluate(lr_model,x_train, x_test, y_train, y_test,"LogisticRegression")
+    return lr_model
+```
+
+
+#### 决策树和随机森林
+
+def DecisionTree(x_train,y_train,x_test,y_test):
+    from sklearn.tree import DecisionTreeClassifier
+    DT = DecisionTreeClassifier(max_depth=5)
+    DT.fit(x_train,y_train)
+    evaluate(DT,x_train, x_test, y_train, y_test,"DecisionTree")
+    return DT
+
+
+def RandomForest(x_train,y_train,x_test,y_test):
+    from sklearn.ensemble import RandomForestClassifier
+    RF = RandomForestClassifier(max_depth=5, n_estimators=10, max_features=2)
+    RF.fit(x_train,y_train)
+    evaluate(RF,x_train, x_test, y_train, y_test,"RandomForest")
+    return RF
+
+
+
+## 评价模型
 ```
 def plot_confusion_matrix(cm, labels, title):
     cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]    # 归一化
@@ -70,7 +151,7 @@ def plot_confusion_matrix(cm, labels, title):
 
 
 
-def evaluate(model,x_train, x_test, y_train, y_test):
+def evaluate(model,x_train, x_test, y_train, y_test,model_name = None):
     acc_train = model.score(x_train, y_train)
     acc_test = model.score(x_test, y_test) 
     print("acc_train:",acc_train)
@@ -92,7 +173,10 @@ def evaluate(model,x_train, x_test, y_train, y_test):
     plt.show()
     
     
-    print("--------------------")
+    if model_name is None:
+        print("--------------------")
+    else:
+        print("----------{}----------".format(model_name))
     print("pre:",precision_score(y_test, y_pre,average=None),precision_score(y_test, y_pre,average='macro'))
     print("recall: ",recall_score(y_test, y_pre, average=None),recall_score(y_test, y_pre, average='macro'))
     print("f1-score: ",f1_score(y_test, y_pre,average=None),f1_score(y_test, y_pre,average='macro'))
