@@ -71,3 +71,30 @@ def dict_to_list(this_dict):
         new_list.append([k,v])
     return new_list
 ```
+
+
+### pandas中数据特征转换
+
+```
+def pre_process(filename):
+    df = pd.read_csv(filename)
+    df_test = pd.read_csv('test_.csv')
+    df.fillna('nan',inplace =True)
+    df_test.fillna('nan',inplace =True)
+
+    columns = ['appProtocol','tlsSni','tlsVersion','tlsSubject_C','tlsSubject_ST','tlsSubject_O',
+                'tlsSubject_CN','tlsSubject_OU','tlsSubject_emailAddress','tlsIssuerDn_C','tlsSubject_L',
+                'tlsIssuerDn_ST','tlsIssuerDn_O','tlsIssuerDn_L','tlsIssuerDn_CN','tlsIssuerDn_OU',
+                'tlsIssuerDn_emailAddress']
+    df1 = df[columns]
+    np1 = np.array(df1,dtype='str')
+    enc = preprocessing.OrdinalEncoder()
+    enc.fit(np1)
+    #print(enc.categories_)
+    np2 = enc.transform(np1)
+    #print(np2)
+    df2 = pd.DataFrame(np2,columns = columns)
+    df3 = pd.concat([df.drop(columns,axis=1),df2],axis = 1)
+    print(df3)
+    df3.to_csv("train_encode.csv",index=False)
+```
