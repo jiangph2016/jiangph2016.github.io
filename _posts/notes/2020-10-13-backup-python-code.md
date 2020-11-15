@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【个人自用】已经写好的函数-防止重复造轮子
+title: 【个人自用】已经写好的python代码-防止重复造轮子
 category: 笔记
 tags: Python
 keywords: Python
@@ -97,4 +97,6 @@ def pre_process(filename):
     df3 = pd.concat([df.drop(columns,axis=1),df2],axis = 1)
     print(df3)
     df3.to_csv("train_encode.csv",index=False)
+
+    return df3
 ```
