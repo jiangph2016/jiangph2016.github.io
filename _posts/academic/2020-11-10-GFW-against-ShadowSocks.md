@@ -33,10 +33,37 @@ shadowsocks是中国最受欢迎的XX工具，在2019年5月开始有大量用�
 
 根据作者的研究发现，GFW使用被动流量分析和主动探测组合来识别shadosocks服务器。
 
-## 背景
+## 背景 
 
 shadowsock协议通过对数据加密使其显示为随机的字节流。  
+ShadowSocks使用两种密码学构造,分别是`stream ciphers`和 `AEAD ciphers`
 
+>流加密：单纯的对称加密算法，其解密步骤是无法确认密钥是否正确的。也就是说，加密后的数据可以用任何密钥执行解密运算，得到一组疑似原始数据，而不知道密钥是否是正确的，也不知道解密出来的原始数据是否正确
+```
+[variable-length IV][encrypted payload...] 
+```
+
+>AEAD(authenticated encryption with associated data)是同时具备保密性，完整性和可认证性的加密形式
+
+![](https://pic1.zhimg.com/80/v2-27436bd00918fb8ba1325e4fe30c8f44_1440w.png)
+```
+[variable-length salt]   
+[2-byte encrypted length][16-byte length tag]  
+[encrypted payload][16-byte payload tag]  
+[2-byte encrypted length][16-byte length tag]  
+[encrypted payload][16-byte payload tag] 
+```
+
+对于AEAD密码，网络流是一系列长度固定的块。
+
+在两种构造中，发送的第一条数据是和Socks协议一样的目标规范。
+```
+[0x01][4-byte IPv4 address][2-byte port]  
+[0x03][1-byte length][hostname][2-byte port]  
+[0x04][16-byte IPv6 address][2-byte port] 
+```
+
+在实验中使用了Shadowsocks-libev和OutlineVPN两个版本进行实验。
 
 
 ## 探针
@@ -45,11 +72,21 @@ shadowsock协议通过对数据加密使其显示为随机的字节流。
 - 在什么情况下观察到了何种类型的探针
 - 探针的来源
 - 探针是否有指纹信息
-- 一个连接对探针响应的延迟有多长
+- 连接建立后多久会收到探针
+
 
 ### 实验
 搭建服务器，实验从2019年9月29日到2020年1月21日，进行了4个月。
-使用不同的加密算法，和两个版本Shadowsocks-libv和OutlineVPN 来扩大覆盖范围。
+使用不同的加密算法，和两个版本Shadowsocks-libev和OutlineVPN 来扩大覆盖范围。
+
+**Shadowsocks-libev**:在腾讯云北京数据中心上的5个VPS安装了SS客户端，在英国的Digital Ocean数据中心上安装了5个SS服务端。每个客户端都仅连接到其中一台服务器。并且设置了一个空白的对照，没有启动服务，仅仅捕获传入流量。  
+使用curl产生流量，并且以给定频率访问以下三个网站:https://www.wikipedia.org, http://example.com,https://gfw.report
+
+
+**OutlineVPN**:在一个美国大学的网络中安装了OutlineVPN v1.0.7服务端，客户端位于中国的住宅网络中，使用Firefox自动流量Alexa Top100万中的被审查的网站。
+
+
+**局限**:位置缺乏多样性
 
 ### 探针类型
 
@@ -61,7 +98,6 @@ shadowsock协议通过对数据加密使其显示为随机的字节流。
 - R4 修改16字节后重放
 - R5 修改6-16字节后重放 
 
-
 其中R3,R4,R5的探针仅仅发送到OutlineVPN服务器，R5探针仅仅观察到两种
 
 两种探针类型看起来随机，长度各异
@@ -70,8 +106,33 @@ shadowsock协议通过对数据加密使其显示为随机的字节流。
 - NR2 长度正好是221字节
 
 ### 探针来源
+![](/assets/img/academic/SS/F3.png)
 
-这些探针来自于12300个不同的IP地址，超过75%的地址发送了超过1个探针
+这些探针来自于12300个不同的IP地址，超过75%的地址发送了超过1个探针，最常见的发送探针的IP地址总结如下表
+![](/assets/img/academic/SS/T2.png)
+作者将观察到的ip地址与之前关于Tor服务器相关工作检测到的探针进行了比较，如下图
+![](/assets/img/academic/SS/F4.png)
+发现仅有少量重叠。
+
+
+**自治域**:如表格所示，统计了探针的所属的自治域
+![](/assets/img/academic/SS/T3.png)
+
+### 对探针进行指纹识别
+
+- IP ID  : 找不到清晰的模式
+- TTL    :  在46-50范围内
+- TCP端口 : 大约90%的探针来自32768-60999端口，从没有探针使用低于1024的端口（前人的工作观察到所有的端口都在使用）
+- TCP timestamp 一个32位计数器，以固定的速率增加,增长率随着操作系统不同而有所不同。
+
+
+根据观察发现，虽然有些很多的数据包来自于不同的IP地址，但是他们拥有几乎非常相似的TSvals，这种情况的发生除非是两个进程同时启动。
+![](/assets/img/academic/SS/F6.png)
+### 探针的延迟
+
+下图显示了从第一次建立连接开始，收到探针的延迟。  
+最短的延迟仅有0.28s,最长的有570小时。超过20%的重放探针在1秒钟内到达，50%的在一分钟内到达，75%的在15分钟内到达。  
+![](/assets/img/academic/SS/F7.png)  
 
 
 ## 触发探针
@@ -83,12 +144,7 @@ shadowsock协议通过对数据加密使其显示为随机的字节流。
 - 是否考虑数据包载荷的熵
 - 由外到内的shadowsocks连接是否会产生一样多的探测
 
-## 对探针进行指纹识别
 
-- IP ID  : 找不到清晰的模式
-- TTL    :  在46-50范围内
-- TCP端口 : 大约90%的探针来自32768-60999端口，从没有探针使用低于1024的端口（前人的工作观察到所有的端口都在使用）
-- TCPval 一个32位计数器，以固定的速率增加
 ### 实验
 
 设计了一个TCP客户端连接到服务器，仅发送一个指定长度和指定香农熵的数据包  
@@ -241,3 +297,8 @@ R4探针是针对初始化向量是16字节的SS服务器，通过枚举255个�
 
 **基于定时的重放过滤**：
 不需要永远记住可能被重放的数据包，只需要在有限的时间内记住即可。
+
+
+## 不足
+- 实验中访问的网站非常有限，仅有3个
+- 实验中服务端与客户端是1对1服务，而现实中大多数是1对n的服务
