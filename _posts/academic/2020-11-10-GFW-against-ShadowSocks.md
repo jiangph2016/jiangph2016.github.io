@@ -9,26 +9,18 @@ keywords: GFW
 {:toc}
 
 
+类型 | 内容  
+-- | --   
+标题|How China Detects and Blocks Shadowsocks 
+会议|IMC2020  
+DOI| <10.1145/3419394.3423644>  
+原文地址|<https://dl.acm.org/doi/abs/10.1145/3419394.3423644>  
 
-原文地址:<https://dl.acm.org/doi/abs/10.1145/3419394.3423644>  
-DOI: <10.1145/3419394.3423644>  
-会议：IMC2020  
-题目：How China Detects and Blocks Shadowsocks 
 
 # GFW检测和屏蔽ShadowSocks的方法
 
-### 简介
-ShdowSocks是一种常见的代理协议，文章通过实验发现了目前检测和屏蔽ShadowSocks的方法，并给出了一些建议用来规避检测。
-
-### Introduction
-
-
-shadowsocks是中国最受欢迎的XX工具，在2019年5月开始有大量用户开始报告shadowsocks被屏蔽而不能使用的情况。  
-
-根据实验发现，GFW使用每个连接中第一个数据包的长度和熵来识别可能的Shadowsocks连接，然后将七种不同的探针发送到服务器来验证。
-
 ## 介绍
-
+ShdowSocks是一种常见的代理协议，文章通过实验发现了目前检测和屏蔽ShadowSocks的方法，并给出了一些建议用来规避检测。
 自从2017年10月以来，有些用户开始报告自己的shadowsocks服务器开始不可用，尤其是在某些特别时期。  
 
 根据作者的研究发现，GFW使用被动流量分析和主动探测组合来识别shadosocks服务器。
@@ -108,10 +100,10 @@ ShadowSocks使用两种密码学构造,分别是`stream ciphers`和 `AEAD cipher
 ### 探针来源
 ![](/assets/img/academic/SS/F3.png)
 
-这些探针来自于12300个不同的IP地址，超过75%的地址发送了超过1个探针，最常见的发送探针的IP地址总结如下表
-![](/assets/img/academic/SS/T2.png)
+这些探针来自于12300个不同的IP地址，超过75%的地址发送了超过1个探针，最常见的发送探针的IP地址总结如下表  
+![](/assets/img/academic/SS/T2.png)  
 作者将观察到的ip地址与之前关于Tor服务器相关工作检测到的探针进行了比较，如下图
-![](/assets/img/academic/SS/F4.png)
+![](/assets/img/academic/SS/F4.png)  
 发现仅有少量重叠。
 
 
@@ -158,6 +150,11 @@ Exp # |Client Length (bytes) |Client Entropy |Server Mode
 3 |[1,2000]  |[0,8] |sink
 
 ### 实验结果
+
+在TCP握手后，**一个数据包**足以触发探针。  
+
+**仅有特定长度的数据包会触发探针**
+
 
 
 
@@ -281,7 +278,7 @@ R4探针是针对初始化向量是16字节的SS服务器，通过枚举255个�
 **更改C2S流量中的有效负载长度**：GFW会考虑连接中第一个数据包的长度来识别SS流量。
 
 
-**Bedgrd**：bridge guard是一个可以在SS服务器上运行的软件，可以强制将SS的握手数据包切分为多个部分，这样子GFW就需要进行复杂的TCP重组才能还原里面的信息。
+**Brdgrd**：bridge guard是一个可以在SS服务器上运行的软件，可以强制将SS的握手数据包切分为多个部分，这样子GFW就需要进行复杂的TCP重组才能还原里面的信息。
 
 作者测试了在开启和关闭Bedgrd情况下收到的探针数量。
 
@@ -293,7 +290,7 @@ R4探针是针对初始化向量是16字节的SS服务器，通过枚举255个�
 
 ### 防御主动探测
 
-**正确的身份构造**：s建议用户仅使用AEAD密码，且完全放弃未经身份验证的加密方法。
+**正确的身份构造**：建议用户仅使用AEAD密码，且完全放弃未经身份验证的加密方法。
 
 **基于定时的重放过滤**：
 不需要永远记住可能被重放的数据包，只需要在有限的时间内记住即可。

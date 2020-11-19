@@ -119,6 +119,7 @@ def LR(x_train,y_train,x_test,y_test):
 
 #### 决策树和随机森林
 
+```
 def DecisionTree(x_train,y_train,x_test,y_test):
     from sklearn.tree import DecisionTreeClassifier
     DT = DecisionTreeClassifier(max_depth=5)
@@ -133,7 +134,7 @@ def RandomForest(x_train,y_train,x_test,y_test):
     RF.fit(x_train,y_train)
     evaluate(RF,x_train, x_test, y_train, y_test,"RandomForest")
     return RF
-
+```
 
 
 ## 评价模型
