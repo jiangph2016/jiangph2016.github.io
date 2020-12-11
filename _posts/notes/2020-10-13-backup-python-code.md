@@ -10,6 +10,31 @@ keywords: Python
 一些已经写好的函数，可以直接拿来用的，防止重复造轮子
 
 
+
+### 字符解析
+
+
+```
+def parse_equal(raw_str,separator = ","):
+    #"C=NO, L=Oslo, O=Opera Software AS, CN=*.opera.com
+    #str_list = raw_str.split(separator)
+    try:
+        str_list = re.split('[/,]',raw_str)
+        pattern = re.compile(r'(.+?)=(.+)')
+    except:
+        print(type(raw_str))
+    result = []
+    for str in str_list:
+        grp = pattern.match(str.strip())
+        if grp:
+            print(grp.groups())
+            result.append(grp.groups())
+    dic = {}
+    for res in result:
+        dic[res[0]] =res[1]
+    return dic
+```
+
 ### 字符串是否包含中文
 
 ```
