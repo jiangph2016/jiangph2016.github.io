@@ -370,3 +370,16 @@ git for-each-ref --format="delete %(refname)" refs/original | git update-ref --s
 git reflog expire --expire=now --all
 git gc --prune=now
 ```
+
+### 案例4-撤销git add
+
+使用`git status`查看一下被add的文件  
+
+撤销所有的修改
+```
+git reset HEAD  
+```
+撤销对指定文件的修改
+```
+git reset HEAD [文件名]
+```

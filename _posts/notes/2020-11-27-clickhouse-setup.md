@@ -21,17 +21,32 @@ docker pull yandex/clickhouse-client:latest
 
 
 ```
-docker run -d --name mych_sever --ulimit nofile=262144:262144 --volume=[本地存储路径]:/var/lib/clickhouse yandex/clickhouse-server
+docker run -d --name mych_server --ulimit nofile=262144:262144 --volume=[本地存储路径]:/var/lib/clickhouse -p 8123:8123 -p 9000:9000 -p 9009:9009 yandex/clickhouse-server
 ```
+
+使用自己的配置文件运行
+```
+docker run -d --name mych_server --ulimit nofile=262144:262144 --volume=/home/win4/clickhouse/data:/var/lib/clickhouse -v=/etc/clickhouse-server:/etc/clickhouse-server -p 8123:8123 -p 9000:9000 -p 9009:9009 yandex/clickhouse-server
+```
+
 
 ## 连接
 
 ```
-docker run -it --rm --link mych_sever:clickhouse-server yandex/clickhouse-client --host clickhouse-server
+docker run -it --rm --link mych_server:clickhouse-server yandex/clickhouse-client --host clickhouse-server
 ```
 
+也可以
+```
+docker exec -it mych_server /bin/bash
+clickhouse-client
+```
 
-
+连接远程的clickhouse-server
+```
+docker run -it --rm yandex/clickhouse-client --host 192.168.123.60 --user default  -m 
+docker run -it -d --volume /Volumes/TR200/storage:/home/ yandex/clickhouse-client --host 192.168.123.60 --user default  -m 
+```
 
 
 ## 常规方式
@@ -54,7 +69,7 @@ sudo yum install -y clickhouse-server clickhouse-client
 - 日志 `/var/log/clickhouse-server`
 - 存储目录 `/var/lib/clickhouse`
 
-#### 配置说明
+#### 配置文件
 
 >config.xml
 - listen_host 限制访问数据库的来源
@@ -62,6 +77,7 @@ sudo yum install -y clickhouse-server clickhouse-client
 
 
 >users.xml
+
 
 
 

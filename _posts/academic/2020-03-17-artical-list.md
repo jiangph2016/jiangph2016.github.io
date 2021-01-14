@@ -44,3 +44,8 @@ Usenixsecurity2020 <https://www.usenix.org/conference/usenixsecurity20/spring-ac
 ## HPDC
 HPDC2018 <https://dl.acm.org/doi/proceedings/10.1145/3208040>  
 HPDC2019 <http://www.hpdc.org/2019/program/>
+
+## RAID
+
+RAID 2019 <https://www.usenix.org/conference/raid2019/proceedings>
+RAID 2020 <https://www.usenix.org/conference/raid2020/proceedings>

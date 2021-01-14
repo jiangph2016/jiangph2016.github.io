@@ -86,3 +86,28 @@ void fun_ls(const char * path)
     closedir(dp); //关闭文件夹
 }
 ```
+
+## access()
+
+
+__功能__：判断目录的状态
+__原型__:
+```
+ int access(const char *filename, int mode);
+```
+### 用法
+- __头文件__: unistd.h
+- __参数类型__:
+    - F_OK 只判断是否存在
+    - R_OK 判断写入权限
+    - W_OK  判断读取权限
+    - X_OK 判断执行权限
+
+### 示例
+```
+if(access(save_directory,F_OK) != 0)
+{
+    printf("not exits")
+    return -1;
+}
+```

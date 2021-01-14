@@ -10,7 +10,7 @@ keywords: Linux
 * content
 {:toc}
 
-随时记录，遇到一个记一个
+记录一些命令+参数的组合
 ## 查询系统信息
 
 - 查看当前文件夹下的各个文件的大小
@@ -73,7 +73,10 @@ find [位置] -name [匹配符]
 ```
 
 ## 查找包含关键词的文件
-
+```
+find .|xargs grep -ri "[字符串]"
+```
+或
 ```
 grep -r [字符串] [路径]
 ```
@@ -96,3 +99,9 @@ jq . config.json
 ```
 命令中的.不能省去
 
+## 清楚缓存
+
+```
+echo 1 > /proc/sys/vm/drop_caches
+```
+ 用`free -h`差看效果

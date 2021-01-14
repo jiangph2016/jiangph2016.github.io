@@ -10,11 +10,10 @@ keywords: Clickhouse
 
 官方文档:<https://clickhouse.tech/docs/zh/introduction/distinctive-features/>
 
-
-
-
 ## 查看信息
 <https://blog.csdn.net/jarry_cm/article/details/106134994>
+
+
 ### 查看数据库的总容量
 
 ```
@@ -25,12 +24,80 @@ select
     round(sum(data_compressed_bytes) / sum(data_uncompressed_bytes) * 100, 0)  as compress_rate
 from system.parts
 ```
-结果如图
 
-<img src="https://gitee.com/greynius/picbed/raw/master/img/20201130172033.png"/>
+### 查看分区信息
+
+```
+select database,table,partition,partition_id,name,path from system.parts where table='visit'
+```
+结果
+```
+─database─┬─table──┬─partition─┬─partition_id─┬─name─────────┬─path───────────────────────────────────────────────────┐
+│ datasets │ visits │ 202006    │ 202006       │ 202006_1_1_0 │ /var/lib/clickhouse/data/datasets/visits/202006_1_1_0/ │
+│ datasets │ visits │ 202007    │ 202007       │ 202007_2_2_0 │ /var/lib/clickhouse/data/datasets/visits/202007_2_2_0/ │
+│ datasets │ visits │ 202008    │ 202008       │ 202008_3_3_0 │ /var/lib/clickhouse/data/datasets/visits/202008_3_3_0/ │
+└──────────┴────────┴───────────┴──────────────┴──────────────┴────────────────────────────────────────────────────────┘
+```
+
+
 
 ## 表操作
 
+
+### 创建
+
+复制一个现有的表
 ```
-select count() from <tablename>
+create table <表名1> as <表名2> 
 ```
+
+### 查看
+#### 统计
+```
+select count() from <表名>
+```
+统计不同的值
+```
+select count(distinct <列名>) from <表名>
+```
+或
+```
+select countDistinct(<列名>) from <表名>c
+```
+
+### 改操作
+
+#### 删除指定数据
+```
+ALTER <表名> DELETE WHERE <表达式>;
+```
+
+#### 数据迁移
+通过复制分区的方式，将数据从一个表复制到另一个表，要求两个表的结构完全相同
+
+```
+alter table <目的表名> attach partition <分区名> from <来源表名> ;
+```
+
+#### 数据导出
+CSV必须大写
+```
+SELECT * FROM <表名> INTO OUTFILE '<文件名>' FORMAT CSV
+```
+
+
+### 数据导入
+推荐输入的时候使用`CSVWithNames`的方式，
+```
+clickhouse-client --host=1.1.1.1 --query='insert into <表名> format CSVWithNames' < data.csv
+```
+
+
+其他几种格式
+- CSVWithNames
+- TabSeparated 
+- JSON
+- JSONEachRow 将json缩写为一行
+
+
+## 函数
