@@ -66,17 +66,40 @@ select countDistinct(<列名>) from <表名>c
 ```
 
 ### 改操作
-
-#### 删除指定数据
+#### 行列修改
+列的增删
+```
+ALTER TABLE <表名> ADD COLUMN <列名1>, ADD COLUMN <列名2>;
+ALTER TABLE <表名> DROP COLUMN <列名1>, DROP COLUMN <列名2>;
+```
+删行
 ```
 ALTER <表名> DELETE WHERE <表达式>;
+DELETE FROM <表名> WHERE <表达式>;
 ```
 
 #### 数据迁移
+首先查看已有的分区
+```
+select partition from system.parts where table='<表名>' group by partition order by partition desc
+```
 通过复制分区的方式，将数据从一个表复制到另一个表，要求两个表的结构完全相同
-
 ```
 alter table <目的表名> attach partition <分区名> from <来源表名> ;
+```
+
+
+如果是**跨数据源迁移**，需要将数据dettach出来
+```
+alter table <来源表名> detach partition <分区名>
+```
+然后复制到对应的存储目录下
+```
+alter table <目的表名> attach partition <分区名>
+```
+如果提示权限错误
+```
+chown -R clickhouse *
 ```
 
 #### 数据导出

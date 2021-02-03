@@ -30,7 +30,8 @@ type: page
 - [Read The Docs](https://readthedocs.org/)
 > 创建、托管和浏览文档
 
-
+- [目标检测在线标注工具](https://www.makesense.ai/)
+> 在线标注图像
 ## 有趣的网址
 
 - [工地海报生成器](https://m.photofunia.com/categories/all_effects/reconstruction)

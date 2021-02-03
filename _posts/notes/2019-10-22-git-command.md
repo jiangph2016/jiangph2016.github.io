@@ -20,6 +20,19 @@ keywords: git
 ![](/assets/img/notes/git.jpg)
 ![](/assets/img/notes/git-map.jpg)
 ## 远程仓库操作
+### 配置用户信息
+此步骤仅仅用于commit，即使输入一个不存在的邮箱也无所谓，但是push到github上以后，显示的也是那个错误的信息
+如果设置为别人的邮箱，就会显示成别人commit的
+```
+git config --list
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+我这里因为有多个github账号需要管理，所以不能设置global的
+```
+git config --local user.email "you@example.com"
+git config --local user.name "Your Name"
+```
 
 ### 配置ssh登录
 1. 在本地的~/.ssh文件夹下，生成SSH Key
@@ -90,7 +103,7 @@ git commit -m "update"
 git push origin master
 ```
 
-如果出现403错误，则`vim .git/config`
+如果出现403错误，则`vim .git/config` 或`git config --local -e`
 修改，增加用户名和密码  
 ```
 [remote "origin"]
