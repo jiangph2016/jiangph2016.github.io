@@ -245,7 +245,15 @@ git reset --hard <ID>
 ```
 git rm [文件名]
 ```
-而`git rm --cached [文件名]`仅仅从暂存区删掉文件
+### 取消对文件的跟踪
+仅仅从暂存区删掉文件，本地文件不动
+```
+git rm --cached [文件名]
+```
+取消当前目录下所有文件的跟踪
+```
+git rm -r --cached .
+```
 
 
 ### 暂存stash
