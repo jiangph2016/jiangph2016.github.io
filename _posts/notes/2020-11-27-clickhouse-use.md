@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clickhouse使用
+title: Clickhouse常用SQL命令
 category: 笔记
 tags: 笔记
 keywords: Clickhouse
@@ -77,6 +77,11 @@ ALTER TABLE <表名> DROP COLUMN <列名1>, DROP COLUMN <列名2>;
 ALTER <表名> DELETE WHERE <表达式>;
 DELETE FROM <表名> WHERE <表达式>;
 ```
+删表
+
+```
+drop table <表名>
+```
 
 #### 数据迁移
 首先查看已有的分区
@@ -102,10 +107,17 @@ alter table <目的表名> attach partition <分区名>
 chown -R clickhouse *
 ```
 
+
+#### 通过sql进行数据迁移
+
+```
+insert into <目的表名> select * from <来源表名>
+```
+
 #### 数据导出
 CSV必须大写
 ```
-SELECT * FROM <表名> INTO OUTFILE '<文件名>' FORMAT CSV
+SELECT * FROM <表名> INTO OUTFILE '<文件名>' FORMAT CSVWithNames
 ```
 
 

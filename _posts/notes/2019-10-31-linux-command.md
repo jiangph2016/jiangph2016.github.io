@@ -82,7 +82,7 @@ jq . config.json
 ```
 echo 1 > /proc/sys/vm/drop_caches
 ```
- 用`free -h`差看效果
+ 用`free -h`查看效果
 
 ## 文件操作
 **find命令**

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 测试Clickhouse的性能
+title: Clickhouse性能测试-SSB
 category: 技巧
 tags: 测试
 keywords: Clickhouse

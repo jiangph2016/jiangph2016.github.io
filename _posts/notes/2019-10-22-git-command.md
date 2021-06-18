@@ -47,7 +47,16 @@ ssh-add ~/.ssh/id_rsa
 ```
 cat id_rsa.pub
 ```
-
+4. 测试
+```
+ssh -T git@github.com
+```
+5. 如果还是无法正常提交 
+则可能是clone的时候用的是https，所以需要更改配置文件
+```
+vim .git/config
+```
+将url的格式改为`git@github.com:[仓库地址]`即可
 ### 添加远程仓库
 
 ```
@@ -403,4 +412,17 @@ git reset HEAD
 撤销对指定文件的修改
 ```
 git reset HEAD [文件名]
+```
+
+### 切换分支出错
+
+
+提示
+>error: The following untracked working tree files would be overwritten by checkout:
+
+解决方案：删除原先的分支，再创建
+```
+git branch -a 
+git branch -d [想要切换的分支名]
+git branch [分支名]
 ```

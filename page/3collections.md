@@ -32,6 +32,8 @@ type: page
 
 - [目标检测在线标注工具](https://www.makesense.ai/)
 > 在线标注图像
+
+- [office安装](https://otp.landian.vip/zh-cn/)
 ## 有趣的网址
 
 - [工地海报生成器](https://m.photofunia.com/categories/all_effects/reconstruction)
@@ -98,6 +100,11 @@ type: page
   - [Google Fonts 加速代理](https://fengmk2.com/blog/2016/google-fonts-mirror)
 
 
+
+
+## 学习用收藏
+
+- [新手友好的CTF靶场整理合集](https://neversec.top/20190404/%E6%96%B0%E6%89%8B%E5%8F%8B%E5%A5%BD%E7%9A%84CTF%E9%9D%B6%E5%9C%BA%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86.html)
 ## Comments
 
 {% include comments.html %}
