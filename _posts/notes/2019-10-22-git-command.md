@@ -35,6 +35,8 @@ git config --local user.name "Your Name"
 ```
 
 ### 配置ssh登录
+
+生成多个ssh密钥见-> [【Linux】生成多份SSH密钥的方法](/2021/06/29/multi-ssh/)
 1. 在本地的~/.ssh文件夹下，生成SSH Key
 ```
 ssh-keygen -t rsa -C "登录的邮箱"
