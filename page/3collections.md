@@ -15,25 +15,21 @@ type: page
 - [鸠摩搜索](https://www.jiumodiary.com/)  
 万能的搜书平台
 - [在线pdf翻译](https://www.onlinedoctranslator.com/zh-CN/)
-
 - [API接口](https://api.66mz8.com/)
 - [付费API](https://www.apishop.net)
-
 - [Google Safe Browsing](https://safebrowsing.google.com/)
 - [Virustotal ](https://www.virustotal.com/gui/home/upload)  
 > 分析可疑文件和URL
-
 - [tsung](http://tsung.erlang-projects.org/)
 > 分布式压力测试工具
-
-
 - [Read The Docs](https://readthedocs.org/)
 > 创建、托管和浏览文档
-
 - [目标检测在线标注工具](https://www.makesense.ai/)
 > 在线标注图像
-
 - [office安装](https://otp.landian.vip/zh-cn/)
+- [UPP 跨平台快速开发的框架](https://www.ultimatepp.org/)
+- [UUP dump](windows各个版本下载)
+
 ## 有趣的网址
 
 - [工地海报生成器](https://m.photofunia.com/categories/all_effects/reconstruction)
@@ -46,9 +42,7 @@ type: page
 - [动图表情](https://app.xuty.tk/static/app/index.html)
 - [狗屁不通文章生成器](https://suulnnka.github.io/BullshitGenerator/index.html)
 - [人工智能对联](https://ai.binwang.me/couplet/)
-
 - [新冠病毒全球分布图](https://coronavirus.app/)
-
 - [淘宝买家秀福利](https://api.66mz8.com/document/rand.tbimg.php)
 
 ## 优秀博客学习

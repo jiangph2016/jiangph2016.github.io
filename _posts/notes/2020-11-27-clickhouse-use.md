@@ -122,6 +122,9 @@ SELECT * FROM <表名> INTO OUTFILE '<文件名>' FORMAT CSVWithNames
 
 
 ### 数据导入
+
+<https://clickhouse.tech/docs/en/interfaces/formats/#csvwithnames>  
+
 推荐输入的时候使用`CSVWithNames`的方式，
 ```
 clickhouse-client --host=1.1.1.1 --query='insert into <表名> format CSVWithNames' < data.csv
@@ -135,4 +138,12 @@ clickhouse-client --host=1.1.1.1 --query='insert into <表名> format CSVWithNam
 - JSONEachRow 将json缩写为一行
 
 
-## 函数
+#### 跳过错误
+
+导入的数据中可能个别行出现错误
+加入参数
+```
+--input_format_allow_errors_num=1 
+--input_format_allow_errors_ratio=0.1
+```
+
