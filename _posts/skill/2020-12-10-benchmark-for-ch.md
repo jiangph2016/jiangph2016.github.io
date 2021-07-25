@@ -16,7 +16,6 @@ keywords: Clickhouse
 Star Schema Benchmark(简称SSB)是基于[TPC-H](http://www.tpc.org/tpch)修改，用于评测星型数据库性能的测试标准，原始工具地址位于<https://github.com/Kyligence/ssb-kylin>
 
 
-
 ## 部署
 
 原始SSB为Apach Kylin数据库设计，这里使用<https://github.com/vadimtk/ssb-dbgen>提供的工具进行测试，此测试中不再是星型查询，而是将star schema转换为flat schema再进行查询

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clickhouse常用SQL命令
+title: ClickHouse常用SQL命令
 category: 笔记
 tags: 笔记
 keywords: Clickhouse

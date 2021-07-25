@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【Linux】docker快速搭建数据库服务
+title: 【Docker】docker快速搭建数据库服务
 category: 技巧
-tags: Linux
+tags: docker
 keywords: mysql,docker,数据库
 ---
 * content

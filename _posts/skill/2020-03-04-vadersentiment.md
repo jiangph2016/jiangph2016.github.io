@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【Python】使用vader-sentiment进行文本的情感分析
+title: 【NLP】使用vader-sentiment进行文本的情感分析
 category: 技巧
-tags: Python
+tags: NLP
 keywords: vader
 ---
 * content

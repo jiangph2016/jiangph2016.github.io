@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python】sklearn的SVM
+title: 【机器学习】sklearn的SVM
 category: 笔记
 tags: 机器学习
 keywords: sklearn,SVM

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: pthread_create()函数传递整型参数问题
+title: 【C】pthread_create()函数传递整型参数问题
 category: 学习
 tags: C
 keywords: Linux,pthread

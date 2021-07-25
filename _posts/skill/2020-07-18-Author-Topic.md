@@ -1,12 +1,10 @@
 ---
 layout: post
-title: 【Python】ATM作者主题模型
+title: 【NLP】ATM作者主题模型
 category: 技巧
-tags: 机器学习
+tags: NLP
 keywords: lda
 ---
-
-
 
 参考：
 - [pyLDA系列︱gensim中带'监督味'的作者-主题模型（Author-Topic Model）

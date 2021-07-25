@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Manjaro的pacman源配置
+title: 【Linux】Manjaro的pacman源配置
 category: 笔记
 tags: Linux
 keywords: pcaman,Manjaro

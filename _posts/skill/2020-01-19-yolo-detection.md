@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用Yolo v5进行目标检测
+title: 【ML】使用Yolo v5进行目标检测
 category: 技能
 tags: ML
 keywords: YOLO,目标检测

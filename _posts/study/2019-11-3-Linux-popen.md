@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【Linux】Linux下的popen使用
+title: 【C】Linux下的popen使用
 category: 学习
-tags: Linux
+tags: C
 keywords: Linux,popen,C
 ---
 

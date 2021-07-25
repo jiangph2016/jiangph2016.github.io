@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Linux C下编程可能用到的命令
+title: 【C】Linux C下编程可能用到的函数
 category: 笔记
-tags: Linux
+tags: C
 keywords: Linux,C
 ---
 

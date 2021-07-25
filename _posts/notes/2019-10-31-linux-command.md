@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux功能命令记录
+title: 【Linux】各种常用命令记录
 category: 笔记
 tags: Linux
 keywords: Linux

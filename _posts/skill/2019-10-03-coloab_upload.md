@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Colaboratory上传和下载文件
+title: 【Python】Colaboratory上传和下载文件
 category: 技巧
 tags: Python
 keywords: colab
@@ -13,15 +13,12 @@ keywords: colab
 
 ## 挂载云端硬盘
 
-
-
 ```
 from google.colab import drive
 drive.mount('/content/drive/')
 import os
 os.chdir("/content/drive/My Drive/[文件夹]")
 ```
-
 
 ## 现用现传
 [Colaboratory](https://colab.research.google.com)，以下简称colab。相当于一个云端的带GPU的jupyter   

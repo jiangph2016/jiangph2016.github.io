@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clickhouse配置&启动记录
+title: ClickHouse配置&启动记录
 category: 笔记
 tags: 笔记
 keywords: Clickhouse
