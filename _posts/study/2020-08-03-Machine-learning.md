@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【机器学习】使用sklearn库进行机器学习二分类任务
+title: 【ML】使用sklearn库进行机器学习二分类任务
 category: 学习
 tags: 机器学习
 keywords: GBDT

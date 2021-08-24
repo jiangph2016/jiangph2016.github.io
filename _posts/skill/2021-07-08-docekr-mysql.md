@@ -53,3 +53,11 @@ secure-file-priv=/
 innodb_lock_wait_timeout=500
 ```
 
+### 允许root远程访问
+
+```
+use mysql
+select host,user from user;
+update user set host='%' where user='root' and host='192.168.40.223';
+flush privileges;
+```

@@ -116,16 +116,10 @@ keywords: git
 ## 备用
 - [joy特征提取  by Cisco](https://github.com/cisco/joy)
 - [动态可视化](https://github.com/Jannchie/Historical-ranking-data-visualization-based-on-d3.js)
-
 - [弱口令字典](https://github.com/Stardustsky/SaiDict)
-
 - [you-get 视频下载](https://github.com/soimort/you-get)
-
-
 - [处理Excel文件](https://openpyxl.readthedocs.io/en/stable/tutorial.html)
-
 - [数据可视化Echarts](https://github.com/pyecharts/pyecharts)
-
 - [pandas-profiling数据分析报告](https://github.com/pandas-profiling/pandas-profiling)
 - [代替正则的parse库](https://github.com/iswbm/magic-python)
     - [再见了，正则表达式](https://zhuanlan.zhihu.com/p/215189735)
@@ -145,6 +139,13 @@ keywords: git
 - [python黑魔法](https://github.com/iswbm/magic-python)
     - 手册：<http://magic.iswbm.com/zh/latest/>
 - [Python 100天](https://github.com/jackfrued/Python-100-Days)
+
+
+## go学习
+- [七天用 Go 从零实现系列](https://github.com/geektutu/7days-golang)
+- [Go 学习之路](https://github.com/Alikhll/golang-developer-roadmap)
+- [go高级编程](https://github.com/chai2010/advanced-go-programming-book)
+
 
 ## 资源收集
 

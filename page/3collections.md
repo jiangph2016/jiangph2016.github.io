@@ -99,6 +99,8 @@ type: page
 ## 学习用收藏
 
 - [新手友好的CTF靶场整理合集](https://neversec.top/20190404/%E6%96%B0%E6%89%8B%E5%8F%8B%E5%A5%BD%E7%9A%84CTF%E9%9D%B6%E5%9C%BA%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86.html)
+
+- [Go语言动手写Web框架 ](https://geektutu.com/post/gee-day1.html)
 ## Comments
 
 {% include comments.html %}

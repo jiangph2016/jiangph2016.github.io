@@ -428,3 +428,9 @@ git branch -a
 git branch -d [想要切换的分支名]
 git branch [分支名]
 ```
+
+
+### 在丢失git信息的情况下提交仓库
+```
+fatal: Not a valid object name: 'master'.
+```
