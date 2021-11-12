@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【ML】使用Yolo v5进行目标检测
+title: 【深度学习】使用Yolo v5进行目标检测
 category: 技巧
-tags: ML
+tags: 机器学习
 keywords: YOLO,目标检测
 ---
 # 使用使用Yolo v5进行目标检测

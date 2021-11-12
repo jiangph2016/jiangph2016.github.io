@@ -2,7 +2,7 @@
 layout: post
 title: 伪造邮件发送技巧总结
 category: 技巧
-tags: Linux
+tags: 工具
 keywords: swaks,email
 ---
 * content

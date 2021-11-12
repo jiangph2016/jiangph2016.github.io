@@ -2,7 +2,7 @@
 layout: post
 title: 【机器学习】sklearn的SVM
 category: 笔记
-tags: 机器学习
+tags: sklean
 keywords: sklearn,SVM
 ---
 * content

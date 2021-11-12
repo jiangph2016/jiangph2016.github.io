@@ -34,7 +34,6 @@ plt.legend((变量1,变量2),('描述1','描述2'))
 - upper center
 - center
 
-
 ## 画水平线和直线 
 
 首先使用np.linspace或者np.arange指定x的范围，然后将y表示为x的函数即可

@@ -42,7 +42,7 @@ def split_dataset(X,y):
 def over_sample(X,y):
     #X,y = split_dataset()
     ros = RandomOverSampler(random_state=0)
-    X_resampled, y_resampled = ros.fit_sample(X, y)
+    X_resampled, y_resampled = ros.fit_resample(X, y)
     print(Counter(y_resampled))
     return  X_resampled, y_resampled
 ```
@@ -52,8 +52,7 @@ def over_sample(X,y):
 
 #### GBDT
 ```
-
-def GBDT():
+def GBDT(x_train, x_test, y_train, y_test):
     from sklearn.ensemble import GradientBoostingClassifier
     gbr = GradientBoostingClassifier(n_estimators=200, max_depth=7,
                                      min_samples_split=2, learning_rate=0.1)

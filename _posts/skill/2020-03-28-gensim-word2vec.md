@@ -2,7 +2,7 @@
 layout: post
 title: 【NLP】使用gensim模块生成word2vec词向量
 category: 技巧
-tags: NLP
+tags: 机器学习
 keywords: word2vec
 ---
 * content

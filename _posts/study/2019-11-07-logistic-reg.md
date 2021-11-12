@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【ML】关于logistic回归
+title: 【机器学习】关于logistic回归
 category: 学习
 tags: 机器学习
 keywords: PRML,logistc

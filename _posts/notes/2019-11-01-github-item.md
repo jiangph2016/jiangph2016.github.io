@@ -19,6 +19,8 @@ keywords: git
 ## 工具
 - [Sidebar Diagnostics](https://github.com/ArcadeRenegade/SidebarDiagnostics)
     - Windows侧边栏显示硬件信息
+- [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor)
+    - 用于Windows平台的网速监控悬浮窗软件
 
 
 ## AI or DL
@@ -145,6 +147,9 @@ keywords: git
 - [七天用 Go 从零实现系列](https://github.com/geektutu/7days-golang)
 - [Go 学习之路](https://github.com/Alikhll/golang-developer-roadmap)
 - [go高级编程](https://github.com/chai2010/advanced-go-programming-book)
+- [go每日一库](https://github.com/darjun/go-daily-lib)
+- [awesome-go](https://github.com/hackstoic/golang-open-source-projects)
+
 
 
 ## 资源收集

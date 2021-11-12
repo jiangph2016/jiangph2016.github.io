@@ -2,7 +2,7 @@
 layout: post
 title: 【NLP】ATM作者主题模型
 category: 技巧
-tags: NLP
+tags: 机器学习
 keywords: lda
 ---
 
