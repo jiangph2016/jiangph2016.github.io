@@ -27,17 +27,16 @@ keywords: docker,email
 
 第一条解析记录，类型为A，使用通配符*，记录值为服务器的公网ip
 
-<img src="assets/image-20210426183945511.png" alt="image-20210426183945511" style="zoom:50%;" />
-
+![](assets/img/notes/email/image-20210426183945511.png)
 
 
 第二条解析记录类型为MX，记录为@，代表我之后的邮箱服务器叫xxx@imapmax.xyz，如果叫mail，那么我以后的邮箱服务器就是xxx@mail.imapmax.xyz，这个的记录值我设为`mail.imapmax.xyz`，最后指向的就是我刚才设置A记录中的记录值
 
-<img src="assets/image-20210426184047416.png" alt="image-20210426184047416" style="zoom:50%;" />
+![](assets/img/notes/email/image-20210426184047416.png)
 
 第三条是一个TXT记录，作用是配置SPF,记录值设置为`v=sopf1 a mx ~all`
 
-<img src="assets/image-20210426190105254.png" alt="image-20210426190105254" style="zoom:50%;" />
+![](assets/img/notes/email/image-20210426190105254.png)
 
 ## 安装
 
@@ -77,7 +76,7 @@ docker-compose up -d
 
 然后就可以从第三方邮件客户端登上这个账户了
 
-![image-20210426150606328](assets/image-20210426150606328.png)
+![image-20210426150606328](assets/img/notes/email/image-20210426150606328.png)
 
 
 
@@ -85,18 +84,18 @@ docker-compose up -d
 
 从阿里云就可以申请免费的SSL证书，也可以使用lets encrypted
 
-![image-20210426150314186](assets/image-20210426150314186.png)
+![image-20210426150314186](assets/img/notes/email/image-20210426150314186.png)
 
 
 
-![image-20210426151715648](assets/image-20210426151715648.png)
+![image-20210426151715648](assets/img/notes/email/image-20210426151715648.png)
 
 
 
 根据文档，需要修改`docker-compose.yml`文件，将pem文件和key文件放到指定位置并映射，最后添加环境变量指定。
 
 ```
-	- ./ssl/:/tmp/ssl:ro
+  - ./ssl/:/tmp/ssl:ro
 environment:
   - SSL_TYPE=manual
   - SSL_CERT_PATH=/tmp/ssl/public.pem

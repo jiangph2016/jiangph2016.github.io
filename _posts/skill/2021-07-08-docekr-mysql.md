@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Docker】docker快速搭建数据库服务
+title: 【Docker】docker快速搭建mysql数据库服务
 category: 技巧
 tags: docker
 keywords: mysql,docker,数据库
@@ -14,30 +14,23 @@ keywords: mysql,docker,数据库
 将`docker-compose.yml`放在根目录下
 ```
 version: '3'
-
 services:
   mysql:
+    restart: always
     container_name: mysql-docker        # 指定容器的名称
     image: mysql:latest                   # 指定镜像和版本
     ports:
-      - "3306:3306"
+      - 3306:3306
+    privileged: true
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_HOST: 192.168.123.54
       TZ: Asia/Shanghai     # 指定时区
     volumes:
-      - "${MYSQL_DIR}/data:/var/lib/mysql"           # 挂载数据目录
-      - "${MYSQL_DIR}/config:/etc/mysql/conf.d"      # 挂载配置文件目录
+      - "./data:/var/lib/mysql"           # 挂载数据目录
+      - "./config:/etc/mysql/conf.d"      # 挂载配置文件目
+      - "./conf/my.cnf:/etc/my.cnf"
 
-```
-
-### 环境变量
-
-生成`.env`文件放在根目录下
-```
-MYSQL_ROOT_PASSWORD=123456
-MYSQL_ROOT_HOST=192.168.123.60
-MYSQL_DIR=./
 ```
 
 ### 配置文件
